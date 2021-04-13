@@ -2,6 +2,7 @@
 
 - **To add, remove, or change things on the list:** Submit a pull request
 - List items should be sorted _alphabetically_.
+- List of papers should be sorted _newest first_
 - Each item should be limited to one link.
 - The link should be the name of the package or project.
 - Descriptions should be clear, concise, and non-promotional.
@@ -12,7 +13,7 @@ Please contribute links you have used or are familiar with. This will help ensur
 
 ## Maintainers
 
-To make sure every PR is checked, we have [team maintainers](MAINTAINERS). Every PR MUST be reviewed by at least two maintainers before it can get merged.
+To make sure every PR is checked, we have [team maintainers](MAINTAINERS). Every PR MUST be reviewed by at least one maintainer before it can get merged.
 
 The maintainers will review your PR and notify you and tag it in case any
 information is still missing. They will wait 8 days for your interaction, after

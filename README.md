@@ -32,6 +32,7 @@ There is a fleet of spacecrafts strategically placed throughout our heliosphere:
     <img alt="Heliophysics Mission Fleet" src="../main/images/helio-fleet-01-2021.jpg?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Heliophysics Mission Fleet, Source <a href="https://science.nasa.gov/heliophysics/mission-fleet-diagram">NASA</a></span>
 </span>
+</br>
 
 A comprehensive list can be found [here](https://science.nasa.gov/missions-page?field_division_tid=5&field_phase_tid=All).
 
@@ -50,9 +51,10 @@ TODO
 
 ## Tools
 
-- Helioviewer is a useful tool to visualise large amounts of SDO data [link](http://www.helioviewer.org)
-- Sunpy - Set of tools for solar data analysis with Python [link](https://sunpy.org/)
-- Aiapy - Package for analyzing calibrated (level 1) EUV imaging data from AIA [link](https://gitlab.com/LMSAL_HUB/aia_hub/aiapy)
+- [Aiapy](https://gitlab.com/LMSAL_HUB/aia_hub/aiapy) - Package for analyzing calibrated (level 1) EUV imaging data from AIA
+- [IRISreader](https://github.com/i4Ds/IRISreader) - Python library that allows for efficient browsing through IRIS satellite data in order to simplify machine learning applications
+- [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool
+- [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python
 
 ## Papers
 
