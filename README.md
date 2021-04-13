@@ -18,6 +18,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 - [Contributing](#contributing)
 - [Missions](#missions)
 - [Datasets](#datasets)
+  - [Data formats](#data-formats)
   - [IRIS](#iris)
   - [SDO](#sdo)
 - [Tools](#tools)
@@ -26,6 +27,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
   - [Event detection, classification and tracking](#event-detection-classification-and-tracking)
   - [Missions](#missions-1)
   - [Space weather prediction](#space-weather-prediction)
+- [Videos](#videos)
 
 ## Missions
 
@@ -40,6 +42,10 @@ SDO and IRIS are part of a larger fleet of spacecraft strategically placed throu
 A comprehensive list of different missions can be found [here](https://science.nasa.gov/missions-page?field_division_tid=5&field_phase_tid=All).
 
 ## Datasets
+
+### Data formats
+
+**JPEG vs. Fits (Flexible Image Transport System - commonly used digital file format in astronomy)**
 
 ### IRIS
 
@@ -87,3 +93,9 @@ TODO
 
 - McGregor, Sean, et al. "Flarenet: A deep learning framework for solar phenomena prediction." Neural Information Processing Systems (NIPS) 2017 workshop on Deep Learning for Physical Sciences (DLPS), Long Beach, CA, US. 2017. [link](http://solardynamo.org/publications/McGregor_etal_NIPS_2017.pdf)
 - Nagem, Tarek AM, et al. "Deep learning technology for predicting solar flares from (Geostationary Operational Environmental Satellite) data." (2018) [link](https://www.researchgate.net/publication/322924477_Deep_Learning_Technology_for_Predicting_Solar_Flares_from_Geostationary_Operational_Environmental_Satellite_Data?enrichId=rgreq-c8121ef3caa7c31906fde5bb9c53e014-XXX&enrichSource=Y292ZXJQYWdlOzMyMjkyNDQ3NztBUzo1OTAyMDE3ODA5NzM1NjhAMTUxNzcyNjQ3ODAyNA==&el=1_x_2&_esc=publicationCoverPdf)
+
+
+## Videos
+
+- [SDO 2021 Science Workshop](https://www.youtube.com/channel/UCy_NKqf3CnLGlBTBJ5DmkBA) - Recent science topics targeting SDO data
+- [Big data 2020 Conference Talk](https://dmlab.cs.gsu.edu/bigdata/bigdata-tutorial-2020/BigData2020_Tutorial_backupTalks2.mp4) - Tutorial 6: Data Sources, Tools, and Techniques for Big Data-driven Machine Learning in Heliophysics
