@@ -24,8 +24,8 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 - [Papers](#papers)
   - [Datasets](#datasets-1)
   - [Event detection, classification and tracking](#event-detection-classification-and-tracking)
-  - [Space weather prediction](#space-weather-prediction)
   - [Missions](#missions-1)
+  - [Space weather prediction](#space-weather-prediction)
 
 ## Missions
 
@@ -78,15 +78,12 @@ TODO
 - Armstrong, John A., and Lyndsay Fletcher. "Fast solar image classification using deep learning and its importance for automation in solar physics." Solar Physics 294.6 (2019): 1-23. [link](https://link.springer.com/article/10.1007/s11207-019-1473-z)
 - Love, Teri, Thomas Neukirch, and Clare E. Parnell. "Analyzing AIA Flare Observations Using Convolutional Neural Networks." Frontiers in Astronomy and Space Sciences 7 (2020): 34. [link](https://doi.org/10.3389/fspas.2020.00034)
 
-### Space weather prediction
-
-- McGregor, Sean, et al. "Flarenet: A deep learning framework for solar phenomena prediction." Neural Information Processing Systems (NIPS) 2017 workshop on Deep Learning for Physical Sciences (DLPS), Long Beach, CA, US. 2017. [link](http://solardynamo.org/publications/McGregor_etal_NIPS_2017.pdf)
-- Nagem, Tarek AM, et al. "Deep learning technology for predicting solar flares from (Geostationary Operational Environmental Satellite) data." (2018) [link](https://www.researchgate.net/publication/322924477_Deep_Learning_Technology_for_Predicting_Solar_Flares_from_Geostationary_Operational_Environmental_Satellite_Data?enrichId=rgreq-c8121ef3caa7c31906fde5bb9c53e014-XXX&enrichSource=Y292ZXJQYWdlOzMyMjkyNDQ3NztBUzo1OTAyMDE3ODA5NzM1NjhAMTUxNzcyNjQ3ODAyNA==&el=1_x_2&_esc=publicationCoverPdf)
-
-
 ### Missions
 
 - Pesnell, W. Dean, B. Jꎬ Thompson, and P. C. Chamberlin. "The solar dynamics observatory (SDO)." The Solar Dynamics Observatory. Springer, New York, NY, 2011. 3-15. [link](https://www.researchgate.net/profile/William-Pesnell/publication/236026766_The_Solar_Dynamics_Observatory/links/0c9605287e3a908b99000000/The-Solar-Dynamics-Observatory.pdf)
 - Lemen, James R., et al. "The atmospheric imaging assembly (AIA) on the solar dynamics observatory (SDO)." The solar dynamics observatory. Springer, New York, NY, 2011. 17-40. [link](https://link.springer.com/article/10.1007/s11207-011-9776-8)
 
+### Space weather prediction
 
+- McGregor, Sean, et al. "Flarenet: A deep learning framework for solar phenomena prediction." Neural Information Processing Systems (NIPS) 2017 workshop on Deep Learning for Physical Sciences (DLPS), Long Beach, CA, US. 2017. [link](http://solardynamo.org/publications/McGregor_etal_NIPS_2017.pdf)
+- Nagem, Tarek AM, et al. "Deep learning technology for predicting solar flares from (Geostationary Operational Environmental Satellite) data." (2018) [link](https://www.researchgate.net/publication/322924477_Deep_Learning_Technology_for_Predicting_Solar_Flares_from_Geostationary_Operational_Environmental_Satellite_Data?enrichId=rgreq-c8121ef3caa7c31906fde5bb9c53e014-XXX&enrichSource=Y292ZXJQYWdlOzMyMjkyNDQ3NztBUzo1OTAyMDE3ODA5NzM1NjhAMTUxNzcyNjQ3ODAyNA==&el=1_x_2&_esc=publicationCoverPdf)
