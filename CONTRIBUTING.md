@@ -2,7 +2,8 @@
 
 - **To add, remove, or change things on the list:** Submit a pull request
 - List items should be sorted _alphabetically_.
-- List of papers should be sorted _newest first_
+- List of papers should be sorted _newest first_.
+- Papers should be citated in MLA style.
 - Each item should be limited to one link.
 - The link should be the name of the package or project.
 - Descriptions should be clear, concise, and non-promotional.
