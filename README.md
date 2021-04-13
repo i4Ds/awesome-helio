@@ -4,7 +4,7 @@ A curated list of datasets, tools and papers for machine learning in heliophysic
 
 ## About
 
-The primary goal of `awesome-helio` is to provide a compiled list for all the great resources contributing to the state of the art in heliophysics that are out there but are often hard to find. `awesome-helio` is mainly focussed on machine learning groups but can also provide important insights for other users.
+The primary goal of `awesome-helio` is to provide a compiled list for all the great resources contributing to the state of the art in heliophysics that are out there but are often hard to find. `awesome-helio` is mainly focussed on SDO and IRIS data and targets machine learning groups but can also provide important insights for other users.
 
 ## Contributing
 
@@ -29,7 +29,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 
 ## Missions
 
-There is a fleet of spacecrafts strategically placed throughout our heliosphere:
+SDO and IRIS are part of a larger fleet of spacecraft strategically placed throughout our heliosphere:
 
 <span class="img_container center" style="display: block;">
     <img alt="Heliophysics Mission Fleet" src="../main/images/helio-fleet-01-2021.jpg?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
@@ -37,7 +37,7 @@ There is a fleet of spacecrafts strategically placed throughout our heliosphere:
 </span>
 </br>
 
-A comprehensive list can be found [here](https://science.nasa.gov/missions-page?field_division_tid=5&field_phase_tid=All).
+A comprehensive list of different missions can be found [here](https://science.nasa.gov/missions-page?field_division_tid=5&field_phase_tid=All).
 
 ## Datasets
 
