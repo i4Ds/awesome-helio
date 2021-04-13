@@ -67,7 +67,7 @@ TODO
 
 - Galvez, Richard, et al. "A machine-learning data set prepared from the NASA solar dynamics observatory mission." The Astrophysical Journal Supplement Series 242.1 (2019): 7. [link](https://arxiv.org/abs/1903.04538)
 - Ahmadzadeh, Azim, Dustin J. Kempton, and Rafal A. Angryk. "A Curated Image Parameter Data Set from the Solar Dynamics Observatory Mission." The Astrophysical Journal Supplement Series 243.1 (2019): 18. [link](https://arxiv.org/abs/1906.01062)
-- Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "A large-scale solar dynamics observatory image dataset for computer vision applications." Scientific data 4.1 (2017): 1-9.
+- Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "A large-scale solar dynamics observatory image dataset for computer vision applications." Scientific data 4.1 (2017): 1-9. [link](https://www.nature.com/articles/sdata201796)
 
 ### Event detection, classification and tracking
 
