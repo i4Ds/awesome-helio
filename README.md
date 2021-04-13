@@ -19,6 +19,8 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 - [Missions](#missions)
 - [Datasets](#datasets)
   - [Data formats](#data-formats)
+  - [e-Callisto](#e-callisto)
+  - [RHESSI](#rhessi)
   - [IRIS](#iris)
   - [SDO](#sdo)
 - [Tools](#tools)
@@ -43,9 +45,19 @@ A comprehensive list of different missions can be found [here](https://science.n
 
 ## Datasets
 
+For datasets at FHNW refer to [this link](DATA_at_FHNW.md).
+
 ### Data formats
 
 **JPEG vs. Fits (Flexible Image Transport System - commonly used digital file format in astronomy)**
+
+### e-Callisto
+
+TODO
+
+### RHESSI
+
+TODO
 
 ### IRIS
 
