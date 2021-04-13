@@ -29,7 +29,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 There is a fleet of spacecrafts strategically placed throughout our heliosphere:
 
 <span class="img_container center" style="display: block;">
-    <img alt="Heliophysics Mission Fleet" src="../blob/master/images/helio-fleet-01-2021.jpg?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <img alt="Heliophysics Mission Fleet" src="../master/images/helio-fleet-01-2021.jpg?raw=true" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <span class="img_caption" style="display: block; text-align: center;">Heliophysics Mission Fleet, Source <a href="https://science.nasa.gov/heliophysics/mission-fleet-diagram">NASA</a></span>
 </span>
 
