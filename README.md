@@ -105,7 +105,10 @@ TODO
 
 - McGregor, Sean, et al. "Flarenet: A deep learning framework for solar phenomena prediction." Neural Information Processing Systems (NIPS) 2017 workshop on Deep Learning for Physical Sciences (DLPS), Long Beach, CA, US. 2017. [link](http://solardynamo.org/publications/McGregor_etal_NIPS_2017.pdf)
 - Nagem, Tarek AM, et al. "Deep learning technology for predicting solar flares from (Geostationary Operational Environmental Satellite) data." (2018) [link](https://www.researchgate.net/publication/322924477_Deep_Learning_Technology_for_Predicting_Solar_Flares_from_Geostationary_Operational_Environmental_Satellite_Data?enrichId=rgreq-c8121ef3caa7c31906fde5bb9c53e014-XXX&enrichSource=Y292ZXJQYWdlOzMyMjkyNDQ3NztBUzo1OTAyMDE3ODA5NzM1NjhAMTUxNzcyNjQ3ODAyNA==&el=1_x_2&_esc=publicationCoverPdf)
-
+- Panos, Brandon, et al. "Identifying typical Mg II flare spectra using machine learning." The Astrophysical Journal 861.1 (2018): 62. [link](https://iopscience.iop.org/article/10.3847/1538-4357/aac779/pdf)
+- Jonas, Eric, et al. "Flare prediction using photospheric and coronal image data." Solar Physics 293.3 (2018): 1-22. [link](https://link.springer.com/article/10.1007/s11207-018-1258-9)
+- Panos, Brandon, and Lucia Kleint. "Real-time flare prediction based on distinctions between flaring and non-flaring active region spectra." The Astrophysical Journal 891.1 (2020): 17. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab700b/pdf)
+- Ivanov, Sergey, et al. "Solar activity classification based on Mg II spectra: towards classification on compressed data." arXiv preprint arXiv:2009.07156 (2020). [link](https://arxiv.org/pdf/2009.07156.pdf)
 
 ## Videos
 
