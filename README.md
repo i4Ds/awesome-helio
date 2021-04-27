@@ -20,9 +20,10 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 - [Datasets](#datasets)
   - [Data formats](#data-formats)
   - [e-Callisto](#e-callisto)
-  - [RHESSI](#rhessi)
   - [IRIS](#iris)
+  - [RHESSI](#rhessi)
   - [SDO](#sdo)
+  - [STIX](#stix)
 - [Tools](#tools)
 - [Papers](#papers)
   - [Datasets](#datasets-1)
@@ -53,15 +54,16 @@ For datasets at FHNW refer to [this link](DATA_at_FHNW.md).
 
 ### e-Callisto
 
+- [e-Callisto Data access](http://www.e-callisto.org/Data/data.html) - The CALLISTO spectrometer is a programmable heterodyne receiver used for observation of solar radio bursts for astronomical science, education, outreach and citizen science as well as rfi-monitoring.
+
+### IRIS
+
 TODO
 
 ### RHESSI
 
 TODO
 
-### IRIS
-
-TODO
 
 ### SDO 
 
@@ -70,6 +72,9 @@ TODO
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory](https://purl.stanford.edu/nk828sc2920) - A curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research.
 - [SDOBenchmark](https://i4ds.github.io/SDOBenchmark/) - Machine learning image dataset for the prediction of solar flares.
 
+### STIX
+
+- [STIX Data Center](https://pub023.cs.technik.fhnw.ch/view/list/bsd) - Spectrometer Telescope for Imaging X-rays (STIX) on Solar Orbiter is a hard X-ray imaging spectrometer covering the energy range from 4 to 150 keV
 
 ## Tools
 
