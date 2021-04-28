@@ -58,7 +58,8 @@ For datasets at FHNW refer to [this link](DATA_at_FHNW.md).
 
 ### IRIS
 
-TODO
+- [LMSAL data search](https://iris.lmsal.com/search/) - Useful search interface by Lockheed Martin with links to various resources for each observation. Use our [internal](http://server0090.cs.technik.fhnw.ch/iris/) mirror for data download or work directly on one of the dedicated machines.
+- [IRISdataset](https://github.com/i4Ds/IRISdataset/tree/master/irisdataset) (Currently only for internal access) - Dataset with selected representative observations for different observation classes.
 
 ### RHESSI
 
