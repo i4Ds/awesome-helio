@@ -106,7 +106,7 @@ TODO
 
 ### Missions
 
-- Pesnell, W. Dean, B. Jꎬ Thompson, and P. C. Chamberlin. "The solar dynamics observatory (SDO)." The Solar Dynamics Observatory. Springer, New York, NY, 2011. 3-15. [link](https://www.researchgate.net/profile/William-Pesnell/publication/236026766_The_Solar_Dynamics_Observatory/links/0c9605287e3a908b99000000/The-Solar-Dynamics-Observatory.pdf)
+- Pesnell, W. Dean, B. J. Thompson, and P. C. Chamberlin. "The solar dynamics observatory (SDO)." The Solar Dynamics Observatory. Springer, New York, NY, 2011. 3-15. [link](https://www.researchgate.net/profile/William-Pesnell/publication/236026766_The_Solar_Dynamics_Observatory/links/0c9605287e3a908b99000000/The-Solar-Dynamics-Observatory.pdf)
 - Lemen, James R., et al. "The atmospheric imaging assembly (AIA) on the solar dynamics observatory (SDO)." The solar dynamics observatory. Springer, New York, NY, 2011. 17-40. [link](https://link.springer.com/article/10.1007/s11207-011-9776-8)
 
 ### Space weather prediction
