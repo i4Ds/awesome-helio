@@ -25,6 +25,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
   - [SDO](#sdo)
   - [STIX](#stix)
 - [Tools](#tools)
+- [Books](#books)
 - [Papers](#papers)
   - [Datasets](#datasets-1)
   - [Event detection, classification and tracking](#event-detection-classification-and-tracking)
@@ -85,6 +86,10 @@ TODO
 - [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool.
 - [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
 - [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
+
+## Books
+
+- [Machine Learning, Statistics, and Data Mining for Heliophysics](https://helioml.github.io/HelioML) - Bobra, Monica, and James Paul Mason. "Machine learning, statistics, and data mining for heliophysics."
 
 ## Papers
 
