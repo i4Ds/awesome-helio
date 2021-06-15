@@ -31,6 +31,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
   - [Event detection, classification and tracking](#event-detection-classification-and-tracking)
   - [Missions](#missions-1)
   - [Space weather prediction](#space-weather-prediction)
+  - [Other Applications](#other-applications)
 - [Videos](#videos)
 
 ## Missions
@@ -73,6 +74,7 @@ TODO
 - [JSOC](http://jsoc.stanford.edu/) - Data products from the Solar Dynamics Observatory, as well as certain other missions and instruments, are available from the JSOC database.
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory](https://purl.stanford.edu/nk828sc2920) - A curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research.
 - [SDOBenchmark](https://i4ds.github.io/SDOBenchmark/) - Machine learning image dataset for the prediction of solar flares.
+- [SOHO/MDI & SDO/HMI line-of-sight Magnetogram Dataset](http://spaceml.org/repo/project/605326665a5e160011fe1175/true) - Curated dataset consisting of co-aligned, co-temporal observations of the same physical structures as observed by HMI and MDI (rotated to the corresponding the HMI frame), ideal for learning-based super-resolution techniques.
 - [Solar Flare Prediction from Time Series of Solar Magnetic Field Parameters](https://www.kaggle.com/c/bigdata2019-flare-prediction/data) - Processed dataset provided for the IEEE Big Data 2019 Big Data Cup consisting of a set of magnetic field parameters calculated from individual SHARPs.
 
 ### STIX
@@ -85,7 +87,7 @@ TODO
 - [IRISreader](https://github.com/i4Ds/IRISreader) - Python library that allows for efficient browsing through IRIS satellite data in order to simplify machine learning applications.
 - [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool.
 - [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
-- [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration.
+- [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration containing a set of [code examples](https://github.com/spaceml-org/helionb-sdoml).
 - [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
 
 ## Books
@@ -126,6 +128,12 @@ TODO
 - Panos, Brandon, and Lucia Kleint. "Real-time flare prediction based on distinctions between flaring and non-flaring active region spectra." The Astrophysical Journal 891.1 (2020): 17. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab700b/pdf)
 - Ivanov, Sergey, et al. "Solar activity classification based on Mg II spectra: towards classification on compressed data." arXiv preprint arXiv:2009.07156 (2020). [link](https://arxiv.org/pdf/2009.07156.pdf)
 - Wang, Jingjing, et al. "Solar Flare Predictive Features Derived from Polarity Inversion Line Masks in Active Regions Using an Unsupervised Machine Learning Algorithm." The Astrophysical Journal 892.2 (2020): 140. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab7b6c/pdf)
+
+
+### Other Applications
+
+- Wright, Paul J., et al. "DeepEM: Demonstrating a Deep Learning Approach to DEM Inversion." Zenodo. [link](https://zenodo.org/record/2587015#.YMjHtZMzau8)
+- Guedes dos Santos, L. F., et al. "Multi-Channel Auto-Calibration for the Atmospheric Imaging Assembly instrument with Deep Learning." AGU Fall Meeting Abstracts. Vol. 2020. 2020. [link](https://arxiv.org/abs/2012.14023)
 
 ## Videos
 
