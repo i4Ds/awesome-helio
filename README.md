@@ -85,6 +85,7 @@ TODO
 - [IRISreader](https://github.com/i4Ds/IRISreader) - Python library that allows for efficient browsing through IRIS satellite data in order to simplify machine learning applications.
 - [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool.
 - [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
+- [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration.
 - [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
 
 ## Books
