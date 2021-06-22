@@ -72,6 +72,7 @@ TODO
 
 - [Curated Image Parameter Dataset](http://dmlab.cs.gsu.edu/dmlabapi/isd_docs.html) - Massive image parameter dataset extracted from the Solar Dynamics Observatory (SDO) mission’s AIA instrument, for the period of January 2011 through the current date, with the cadence of six minutes, for nine wavelength channels.
 - [JSOC](http://jsoc.stanford.edu/) - Data products from the Solar Dynamics Observatory, as well as certain other missions and instruments, are available from the JSOC database.
+- [LSDO](https://dataverse.harvard.edu/dataverse/lsdo) - A Large-scale Solar Dynamics Observatory image dataset for computer vision applications Dataverse.
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory](https://purl.stanford.edu/nk828sc2920) - A curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research.
 - [SDOBenchmark](https://i4ds.github.io/SDOBenchmark/) - Machine learning image dataset for the prediction of solar flares.
 - [SOHO/MDI & SDO/HMI line-of-sight Magnetogram Dataset](http://spaceml.org/repo/project/605326665a5e160011fe1175/true) - Curated dataset consisting of co-aligned, co-temporal observations of the same physical structures as observed by HMI and MDI (rotated to the corresponding the HMI frame), ideal for learning-based super-resolution techniques.
