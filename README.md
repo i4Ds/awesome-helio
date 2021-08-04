@@ -111,6 +111,7 @@ TODO
 
 ### Event detection, classification and tracking
 
+- Martens, P. C. H., et al. "Computer vision for the solar dynamics observatory (SDO)." Solar Physics 275.1 (2012): 79-113. [link](https://link.springer.com/article/10.1007/s11207-010-9697-y)
 - Schuh, Michael A., Dustin Kempton, and Rafal A. Angryk. "A Region-Based Retrieval System for Heliophysics Imagery." FLAIRS Conference. 2017. [link](https://www.researchgate.net/profile/Dustin-Kempton-2/publication/317385457_A_Region-based_Retrieval_System_for_Heliophysics_Imagery/links/5cf7a11692851c4dd02a3da9/A-Region-based-Retrieval-System-for-Heliophysics-Imagery.pdf)
 - Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "Solar event classification using deep convolutional neural networks." International Conference on Artificial Intelligence and Soft Computing. Springer, Cham, 2017. [link](https://www.researchgate.net/publication/317570870)
 - Illarionov, Egor A., and Andrey G. Tlatov. "Segmentation of coronal holes in solar disc images with a convolutional neural network." Monthly Notices of the Royal Astronomical Society 481.4 (2018): 5014-5021. [link](https://arxiv.org/abs/1809.05748)
