@@ -70,6 +70,8 @@ TODO
 
 ### SDO 
 
+Before working with SDO data make sure to checkout the [Guide to SDO Data Analysis](https://www.lmsal.com/sdodocs/doc/dcur/SDOD0060.zip/zip/entry/index.html), which contains a set of instructions on how to browse, find, download, and analyze SDO data.
+
 - [Curated Image Parameter Dataset](http://dmlab.cs.gsu.edu/dmlabapi/isd_docs.html) - Massive image parameter dataset extracted from the Solar Dynamics Observatory (SDO) mission’s AIA instrument, for the period of January 2011 through the current date, with the cadence of six minutes, for nine wavelength channels.
 - [JSOC](http://jsoc.stanford.edu/) - Data products from the Solar Dynamics Observatory, as well as certain other missions and instruments, are available from the JSOC database.
 - [LSDO](https://dataverse.harvard.edu/dataverse/lsdo) - A Large-scale Solar Dynamics Observatory image dataset for computer vision applications Dataverse.
@@ -88,10 +90,11 @@ TODO
 - [Aiapy](https://gitlab.com/LMSAL_HUB/aia_hub/aiapy) - Package for analyzing calibrated (level 1) EUV imaging data from AIA.
 - [IRISreader](https://github.com/i4Ds/IRISreader) - Python library that allows for efficient browsing through IRIS satellite data in order to simplify machine learning applications.
 - [Global High-Resolution Hα network](http://www.bbso.njit.edu/Research/Halpha/)
-- [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool.
+- [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool. [code](https://github.com/Helioviewer-Project/JHelioviewer-SWHV)
 - [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
 - [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration containing a set of [code examples](https://github.com/spaceml-org/helionb-sdoml).
 - [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
+- [SWPC CME Analysis Tool (SWPC_CAT)](https://ccmc.gsfc.nasa.gov/swpc_cat_web/) - Primary tool being used by NOAA SWPC in measuring key parameters of a Coronal Mass Ejection (CME) [code](https://github.com/nasa/ccmc-swpc-cat-web)
 
 ## Books
 
