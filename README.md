@@ -17,6 +17,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
 - [About](#about)
 - [Contributing](#contributing)
 - [Missions](#missions)
+- [Books](#books)
 - [Datasets](#datasets)
   - [Data formats](#data-formats)
   - [e-Callisto](#e-callisto)
@@ -24,14 +25,14 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
   - [RHESSI](#rhessi)
   - [SDO](#sdo)
   - [STIX](#stix)
-- [Tools](#tools)
-- [Books](#books)
+- [Links](#links)
 - [Papers](#papers)
   - [Datasets](#datasets-1)
   - [Event detection, classification and tracking](#event-detection-classification-and-tracking)
   - [Missions](#missions-1)
   - [Space weather prediction](#space-weather-prediction)
   - [Other Applications](#other-applications)
+- [Tools](#tools)
 - [Videos](#videos)
 
 ## Missions
@@ -45,6 +46,10 @@ SDO and IRIS are part of a larger fleet of spacecraft strategically placed throu
 </br>
 
 A comprehensive list of different missions can be found [here](https://science.nasa.gov/missions-page?field_division_tid=5&field_phase_tid=All).
+
+## Books
+
+- [Machine Learning, Statistics, and Data Mining for Heliophysics](https://helioml.github.io/HelioML) - Bobra, Monica, and James Paul Mason. "Machine learning, statistics, and data mining for heliophysics."
 
 ## Datasets
 
@@ -85,23 +90,15 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 
 - [STIX Data Center](https://pub023.cs.technik.fhnw.ch/view/list/bsd) - Spectrometer Telescope for Imaging X-rays (STIX) on Solar Orbiter is a hard X-ray imaging spectrometer covering the energy range from 4 to 150 keV
 
-## Tools
+## Links
 
-- [Aiapy](https://gitlab.com/LMSAL_HUB/aia_hub/aiapy) - Package for analyzing calibrated (level 1) EUV imaging data from AIA.
-- [IRISreader](https://github.com/i4Ds/IRISreader) - Python library that allows for efficient browsing through IRIS satellite data in order to simplify machine learning applications.
-- [Global High-Resolution Hα network](http://www.bbso.njit.edu/Research/Halpha/)
-- [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool. [code](https://github.com/Helioviewer-Project/JHelioviewer-SWHV)
-- [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
-- [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration containing a set of [code examples](https://github.com/spaceml-org/helionb-sdoml).
-- [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
-- [SWPC CME Analysis Tool (SWPC_CAT)](https://ccmc.gsfc.nasa.gov/swpc_cat_web/) - Primary tool being used by NOAA SWPC in measuring key parameters of a Coronal Mass Ejection (CME) [code](https://github.com/nasa/ccmc-swpc-cat-web)
-
-## Books
-
-- [Machine Learning, Statistics, and Data Mining for Heliophysics](https://helioml.github.io/HelioML) - Bobra, Monica, and James Paul Mason. "Machine learning, statistics, and data mining for heliophysics."
+- [LMSAL AIA](https://aia.lmsal.com/) - Home of SDO's atmospheric imaging assembly (aia).
+- [Sungate](https://www.lmsal.com/sungate/) - Portal to solar data, events, and search tools.
+- [SDO Documentation](https://www.lmsal.com/sdodocs/)
+- [SDO Mission](https://sdo.gsfc.nasa.gov/mission/)
+- [SDO Guide](https://sdo.gsfc.nasa.gov/assets/docs/SDO_Guide.pdf) - A comprehensive booklet with information about the mission.
 
 ## Papers
-
 
 ### Datasets
 
@@ -145,6 +142,18 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 
 - Wright, Paul J., et al. "DeepEM: Demonstrating a Deep Learning Approach to DEM Inversion." Zenodo. [link](https://zenodo.org/record/2587015#.YMjHtZMzau8)
 - Guedes dos Santos, L. F., et al. "Multi-Channel Auto-Calibration for the Atmospheric Imaging Assembly instrument with Deep Learning." AGU Fall Meeting Abstracts. Vol. 2020. 2020. [link](https://arxiv.org/abs/2012.14023)
+
+## Tools
+
+- [Aiapy](https://gitlab.com/LMSAL_HUB/aia_hub/aiapy) - Package for analyzing calibrated (level 1) EUV imaging data from AIA.
+- [IRISreader](https://github.com/i4Ds/IRISreader) - Python library that allows for efficient browsing through IRIS satellite data in order to simplify machine learning applications.
+- [Global High-Resolution Hα network](http://www.bbso.njit.edu/Research/Halpha/)
+- [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool. [code](https://github.com/Helioviewer-Project/JHelioviewer-SWHV)
+- [Integrated Solar Database](https://dmlab.cs.gsu.edu/solar/isd/) - Solar and heliospheric image visualization tool including image parameters with Extended Spatiotemporal Querying Capabilities.
+- [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
+- [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration containing a set of [code examples](https://github.com/spaceml-org/helionb-sdoml).
+- [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
+- [SWPC CME Analysis Tool (SWPC_CAT)](https://ccmc.gsfc.nasa.gov/swpc_cat_web/) - Primary tool being used by NOAA SWPC in measuring key parameters of a Coronal Mass Ejection (CME) [code](https://github.com/nasa/ccmc-swpc-cat-web)
 
 ## Videos
 
