@@ -1,4 +1,3 @@
-
 # Curated Image Parameter Dataset <!-- omit in toc -->
 
 Includes an image parameter dataset extracted from the Solar Dynamics Observatory (SDO) mission’s AIA instrument computed for the period of 2011-01 through now, with the cadence of 6 minutes, for 9 wavelength channels. 
