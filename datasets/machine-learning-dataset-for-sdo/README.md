@@ -17,6 +17,8 @@ The dataset can be downloaded from the [Stanford Digital Repository](https://pur
 
 ### Script
 
+__Credit: Jonathan Donzallaz__
+
 Alternatively, the following script can be used
 
 ```
@@ -30,9 +32,28 @@ brew install bash wget
 /usr/local/bin/bash ./download.sh 94 2012 ./data/sdo 2018
 ```
 
+and extract it using 
+
+```
+./extract.sh Bz 2013 ./data 2018
+```
+
+this will result in the following folder structure
+
+```
+datadir
+│   README.md  
+│
+└───<channel>
+│   └───<year>
+│       └───<month>
+│           └───<day>
+                │   <instrument><year><month><day>_<hhmm>_<channel>.npz
+```
+
 ### NAS
 
-The full dataset can be found on the FHNW NAS under data02/sdo/machine-learning-dataset.
+The full dataset can be found on the FHNW NAS under `data02/sdo/stanford_machine_learning_dataset_for_sdo`.
 
 ## Cite
 
