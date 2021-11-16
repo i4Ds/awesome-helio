@@ -7,7 +7,8 @@ Includes a curated data set from the NASA Solar Dynamics Observatory (SDO) missi
 the total size is 6.5TB
 
 - [Data Access](#data-access)
-  - [Script](#script)
+  - [Download using a script](#download-using-a-script)
+  - [Loading the data using a script](#loading-the-data-using-a-script)
   - [NAS](#nas)
 - [Cite](#cite)
 
@@ -15,7 +16,7 @@ the total size is 6.5TB
 
 The dataset can be downloaded from the [Stanford Digital Repository](https://purl.stanford.edu/nk828sc2920)
 
-### Script
+### Download using a script
 
 __Credit: Jonathan Donzallaz__
 
@@ -32,7 +33,9 @@ brew install bash wget
 /usr/local/bin/bash ./download.sh 94 2012 ./data/sdo 2018
 ```
 
-and extract it using 
+### Loading the data using a script
+
+The data can the be extracted as follows:
 
 ```
 ./extract.sh Bz 2013 ./data 2018
@@ -41,15 +44,38 @@ and extract it using
 this will result in the following folder structure
 
 ```
-datadir
-│   README.md  
-│
-└───<channel>
-│   └───<year>
-│       └───<month>
-│           └───<day>
+datadir/
+└───<instrument>/
+│   └───<year>/
+│       └───<month>/
+│           └───<day>/
                 │   <instrument><year><month><day>_<hhmm>_<channel>.npz
 ```
+
+The data is stored as follows:
+
+- AIA: as a set of images of the form ({$year}/AIA/{$wavelength}/{$month}/{$day}/AIA{$year}{$month}{$day}_{$hour}{$minute}_{$wavelength}.npz) e.g., AIA/2013/AIA/0211/11/25/AIA20131125_0824_0211.npz
+- HMI : as a set of images of the form ({$year}/HMI/{$wavelength}/{$month}/{$day}/HMI{$year}{$month}{$day}_{$hour}{$minute}_{$wavelength}.npz) e.g., HMI/2013/HMI/bz/11/25/HMI20131125_0824_bz.npz
+- EVE: as a single numpy file EVE/irradiance.npy, where each row is a date in time. Any invalid datapoint is set as -1, which you should specially handle or delete. The ones primarily of interest are from MEGS-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14] (note the missing 13); Indices 15 and higher are rarely observed.
+
+Each image is stored as a variable 'x' in each npz. For compression reasons, the data is stored as float16 if the data fits and float32 otherwise. You should immediately, however, convert the data to at least float32.
+
+The instruments' data are joined by join.csv, which has the form
+
+```
+eve_ind,reduced_ind,time,94,131,171,193,211,304,335,1600,1700,bx,by,bz
+...
+22154,1874364,2013-11-25 08:24:00,2013/AIA/0094/11/25/AIA20131125_0824_0094.npz,2013/AIA/0131/11/25/AIA20131125_0824_0131.npz,2013/AIA/0171/11/25/AIA20131125_0824_0171.npz,2013/AIA/0193/11/25/AIA20131125_0824_0193.npz,2013/AIA/0211/11/25/AIA20131125_0824_0211.npz,2013/AIA/0304/11/25/AIA20131125_0824_0304.npz,2013/AIA/0335/11/25/AIA20131125_0824_0335.npz,2013/AIA/1600/11/25/AIA20131125_0824_1600.npz,2013/AIA/1700/11/25/AIA20131125_0824_1700.npz,2013/HMI/bx/11/25/HMI20131125_0824_bx.npz,2013/HMI/by/11/25/HMI20131125_0824_by.npz,2013/HMI/bz/11/25/HMI20131125_0824_bz.npz
+...
+```
+
+Each line corresponds to a data point:
+
+- eve_ind: the index into irradiance.npy, or None if the data point is not valid
+- reduce_ind: the index into the original irradiance.npy file
+- time: the time of the observation
+- (94/131/171/193/211/304/335/1600/1700): the corresponding AIA files
+- (bx/by/bz): the corresponding HMI files
 
 ### NAS
 
