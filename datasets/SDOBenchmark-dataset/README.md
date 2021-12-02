@@ -23,7 +23,7 @@ The dataset can be downloaded from the [SDOBenchmark webpage](https://i4ds.githu
 
 ### NAS
 
-Dataset can be found on the FHNW NAS under data02/sdo/sdobenchmark-dataset.
+Dataset can be found on the FHNW NAS under data02/sdo/sdo_benchmark
 
 ## Cite
 
