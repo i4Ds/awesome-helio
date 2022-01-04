@@ -24,6 +24,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
   - [IRIS](#iris)
   - [RHESSI](#rhessi)
   - [SDO](#sdo)
+  - [SOHO](#soho)
   - [STIX](#stix)
 - [Links](#links)
 - [Papers](#papers)
@@ -77,14 +78,21 @@ TODO
 
 Before working with SDO data make sure to checkout the [Guide to SDO Data Analysis](https://www.lmsal.com/sdodocs/doc/dcur/SDOD0060.zip/zip/entry/index.html), which contains a set of instructions on how to browse, find, download, and analyze SDO data.
 
-- [Curated Image Parameter Dataset](http://dmlab.cs.gsu.edu/dmlabapi/isd_docs.html) - Massive image parameter dataset extracted from the Solar Dynamics Observatory (SDO) mission’s AIA instrument, for the period of January 2011 through the current date, with the cadence of six minutes, for nine wavelength channels.
+- [Curated Image Parameter Dataset](http://dmlab.cs.gsu.edu/dmlabapi/isd_docs.html) - Massive image parameter dataset extracted from the Solar Dynamics Observatory (SDO) mission's AIA instrument, for the period of January 2011 through the current date, with the cadence of six minutes, for nine wavelength channels.
 - [JSOC](http://jsoc.stanford.edu/) - Data products from the Solar Dynamics Observatory, as well as certain other missions and instruments, are available from the JSOC database.
+- [DeepSDO Event dataset](http://sdo.kasi.re.kr/dataset_deepsdo_event.aspx) - Dataset curated by experts containing three solar event categories (coronal holes, sunspots, and prominences). Suitable for object detection using deep learning-based models. 
 - [LSDO](https://dataverse.harvard.edu/dataverse/lsdo) - A Large-scale Solar Dynamics Observatory image dataset for computer vision applications Dataverse.
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory](https://purl.stanford.edu/nk828sc2920) - A curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research.
 - [SDOBenchmark](https://i4ds.github.io/SDOBenchmark/) - Machine learning image dataset for the prediction of solar flares.
 - [SOHO/MDI & SDO/HMI line-of-sight Magnetogram Dataset](http://spaceml.org/repo/project/605326665a5e160011fe1175/true) - Curated dataset consisting of co-aligned, co-temporal observations of the same physical structures as observed by HMI and MDI (rotated to the corresponding the HMI frame), ideal for learning-based super-resolution techniques.
+- [SOHO/SDO ML Ready Dataset](https://github.com/cshneider/soho-ml-data-ready) - Code to generate and temporally sync SoHO and/or SDO Mission image products to make a standardized machine-learning-ready dataset.
 - [Solar Flare Prediction from Time Series of Solar Magnetic Field Parameters](https://www.kaggle.com/c/bigdata2019-flare-prediction/data) - Processed dataset provided for the IEEE Big Data 2019 Big Data Cup consisting of a set of magnetic field parameters calculated from individual SHARPs.
 - [SWAN-SF](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EBCFKM) Multivariate time series (MVTS) data extracted from HMI Active Region Patch (SHARP) series.
+
+
+### SOHO
+
+- Shneider, Carl, et al. "A Machine-Learning-Ready Dataset Prepared from the Solar and Heliospheric Observatory Mission." arXiv preprint arXiv:2108.06394 (2021).
 
 ### STIX
 
@@ -102,11 +110,12 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 
 ### Datasets
 
-
 - Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "A large-scale solar dynamics observatory image dataset for computer vision applications." Scientific data 4.1 (2017): 1-9. [link](https://www.nature.com/articles/sdata201796)
 - Ahmadzadeh, Azim, Dustin J. Kempton, and Rafal A. Angryk. "A Curated Image Parameter Data Set from the Solar Dynamics Observatory Mission." The Astrophysical Journal Supplement Series 243.1 (2019): 18. [link](https://arxiv.org/abs/1906.01062)
 - Galvez, Richard, et al. "A machine-learning data set prepared from the NASA solar dynamics observatory mission." The Astrophysical Journal Supplement Series 242.1 (2019): 7. [link](https://arxiv.org/abs/1903.04538)
 - Angryk, Rafal A., et al. "Multivariate time series dataset for space weather data analytics." Scientific data 7.1 (2020): 1-13. [link](https://www.nature.com/articles/s41597-020-0548-x.pdf) [code](https://bitbucket.org/gsudmlab/workspace/projects/FP)
+- Shneider, Carl, et al. "A Machine-Learning-Ready Dataset Prepared from the Solar and Heliospheric Observatory Mission." arXiv preprint arXiv:2108.06394 (2021). [link](https://arxiv.org/abs/2108.06394)
+- Baek, Ji-Hye, et al. "Solar Event Detection Using Deep-Learning-Based Object Detection Methods." Solar Physics 296.11 (2021): 1-15. [link](https://link.springer.com/article/10.1007/s11207-021-01902-5)
 
 
 ### Event detection, classification and tracking
