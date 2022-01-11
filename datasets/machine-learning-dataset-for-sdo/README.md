@@ -9,6 +9,7 @@ the total size is 6.5TB
 - [Data Access](#data-access)
   - [Download using a script](#download-using-a-script)
   - [Loading the data using a script](#loading-the-data-using-a-script)
+  - [Indexing](#indexing)
   - [NAS](#nas)
 - [Cite](#cite)
 
@@ -59,6 +60,22 @@ The data is stored as follows:
 - EVE: as a single numpy file EVE/irradiance.npy, where each row is a date in time. Any invalid datapoint is set as -1, which you should specially handle or delete. The ones primarily of interest are from MEGS-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14] (note the missing 13); Indices 15 and higher are rarely observed.
 
 Each image is stored as a variable 'x' in each npz. For compression reasons, the data is stored as float16 if the data fits and float32 otherwise. You should immediately, however, convert the data to at least float32.
+
+
+### Indexing
+
+Using the `sdo_ml_indexer` utility the dataset can be indexed:
+
+```
+python sdo_ml_indexer.py --data_dir "/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo"  --target_dir "/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted" --extract True
+```
+
+resulting in an `index.csv` file in the root of the target directory
+
+```
+path,file_name,instrument,channel,timestamp
+/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted/2015/02/03/HMI20150203_1336_bx.npz,HMI20150203_1336_bx.npz,HMI,bx,2015-02-03T13:36:00
+```
 
 ### NAS
 
