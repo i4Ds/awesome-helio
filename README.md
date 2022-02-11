@@ -100,16 +100,32 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 
 ## Links
 
-- [LMSAL AIA](https://aia.lmsal.com/) - Home of SDO's atmospheric imaging assembly (aia).
-- [Sungate](https://www.lmsal.com/sungate/) - Portal to solar data, events, and search tools.
+- [AGU Link Collection](https://connect.agu.org/spa/resources) - Solar physics link collection.
+- [Astrophysics Data System (ADS)](https://ui.adsabs.harvard.edu/) - Digital library portal for researchers in astronomy and physics.
+- [Carrington rotation date list](http://umtof.umd.edu/pm/crn/)
+- [Community Coordinated Modeling Center](https://ccmc.gsfc.nasa.gov/index.php) - Partnership for space science and space weather models.
+- [Dr Peter R. Young's website](https://www.pyoung.org/) - Useful materials for different missions. 
+- [Helionauts](https://helionauts.org/) - Heliophysics Forum.
+- [Helioanalytics](https://sites.google.com/view/helioanalytics/resources) - Resources for 
+- [Helio-KNOW](https://github.com/rmcgranaghan/Helio-KNOW)  - Collection of software and systems for improved information representation in Heliophysics.
+- [Heliophysics Data Portal](https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher)
+- [LMSAL AIA](https://aia.lmsal.com/) - Home of SDO's atmospheric imaging assembly (AIA).
 - [SDO Documentation](https://www.lmsal.com/sdodocs/)
-- [SDO Mission](https://sdo.gsfc.nasa.gov/mission/)
 - [SDO Guide](https://sdo.gsfc.nasa.gov/assets/docs/SDO_Guide.pdf) - A comprehensive booklet with information about the mission.
+- [SDO Mission](https://sdo.gsfc.nasa.gov/mission/)
+- [SDO Quick Movie Browser](https://sdo.gsfc.nasa.gov/data/aiahmi/)
+- [Spacewheater.com](https://spaceweather.com/) - News and information about the Sun-Earth environment.
+- [](https://www.spaceweatherlive.com/) - Real-time auroral and solar activity.
+- [Space wheater data portal](https://lasp.colorado.edu/space-weather-portal/data) - Tool for visualizing, downloading and co-plotting space wheather data.
+- [SSCWeb Satellite Situation Center](https://sscweb.gsfc.nasa.gov/) -  Locations for most helio spacecraft.
+- [Sungate](https://www.lmsal.com/sungate/) - Portal to solar data, events, and search tools.
+
 
 ## Papers
 
 ### Datasets
 
+- Mahajan, Sushant S., et al. "Improved Measurements of the Sun's Meridional Flow and Torsional Oscillation from Correlation Tracking on MDI and HMI Magnetograms." The Astrophysical Journal 917.2 (2021): 100. [link](https://arxiv.org/abs/2107.07731) [data](https://dataverse.harvard.edu/dataverse/lct-on-solar-magnetograms)
 - Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "A large-scale solar dynamics observatory image dataset for computer vision applications." Scientific data 4.1 (2017): 1-9. [link](https://www.nature.com/articles/sdata201796)
 - Ahmadzadeh, Azim, Dustin J. Kempton, and Rafal A. Angryk. "A Curated Image Parameter Data Set from the Solar Dynamics Observatory Mission." The Astrophysical Journal Supplement Series 243.1 (2019): 18. [link](https://arxiv.org/abs/1906.01062)
 - Galvez, Richard, et al. "A machine-learning data set prepared from the NASA solar dynamics observatory mission." The Astrophysical Journal Supplement Series 242.1 (2019): 7. [link](https://arxiv.org/abs/1903.04538)
@@ -159,6 +175,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [Global High-Resolution Hα network](http://www.bbso.njit.edu/Research/Halpha/)
 - [Helioviewer](http://www.helioviewer.org) - Solar and heliospheric image visualization tool. [code](https://github.com/Helioviewer-Project/JHelioviewer-SWHV)
 - [Integrated Solar Database](https://dmlab.cs.gsu.edu/solar/isd/) - Solar and heliospheric image visualization tool including image parameters with Extended Spatiotemporal Querying Capabilities.
+- [integrated Space Weather Analysis (iSWA) system](https://iswa.gsfc.nasa.gov/IswaSystemWebApp/)
 - [SolarMonitor](https://solarmonitor.org/) - Provides realtime information about the solar activity. The most recent images of the sun are shown, together with the description of the different NOAA AR of the day and which flares has been associated to them.
 - [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration containing a set of [code examples](https://github.com/spaceml-org/helionb-sdoml).
 - [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
