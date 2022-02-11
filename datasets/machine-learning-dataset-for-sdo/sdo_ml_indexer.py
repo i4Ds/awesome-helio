@@ -12,9 +12,6 @@ import pandas as pd
 import click
 import pathlib
 
-include = set(
-    ["/nas08-data02/astroml_data/stanford_machine_learning_dataset_for_sdo/HMI_Bx_201308.tar"])
-
 #
 #    small data parsing utility for the Machine Learning Dataset for SDO
 #
@@ -78,7 +75,7 @@ def fetch_metadata(target_path):
     first_known_date = index_df.index.min()
     last_known_date = index_df.index.max()
     # pre-cache goes metadata
-    # fetch_goes_metadata(first_known_date, last_known_date, target_path)
+    fetch_goes_metadata(first_known_date, last_known_date, target_path)
     for idx, row in index_df.iterrows():
         goes = get_goes_at(row["timestamp"], target_path)
         # On each GOES satellite there are two X-ray Sensors (XRS) which provide solar X-ray irradiances for the wavelength bands of
