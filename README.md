@@ -115,7 +115,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [SDO Mission](https://sdo.gsfc.nasa.gov/mission/)
 - [SDO Quick Movie Browser](https://sdo.gsfc.nasa.gov/data/aiahmi/)
 - [Spacewheater.com](https://spaceweather.com/) - News and information about the Sun-Earth environment.
-- [](https://www.spaceweatherlive.com/) - Real-time auroral and solar activity.
+- [Spaceweatherlive.com](https://www.spaceweatherlive.com/) - Real-time auroral and solar activity.
 - [Space wheater data portal](https://lasp.colorado.edu/space-weather-portal/data) - Tool for visualizing, downloading and co-plotting space wheather data.
 - [SSCWeb Satellite Situation Center](https://sscweb.gsfc.nasa.gov/) -  Locations for most helio spacecraft.
 - [Sungate](https://www.lmsal.com/sungate/) - Portal to solar data, events, and search tools.
