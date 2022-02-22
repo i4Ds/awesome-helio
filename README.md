@@ -160,7 +160,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Ivanov, Sergey, et al. "Solar activity classification based on Mg II spectra: towards classification on compressed data." arXiv preprint arXiv:2009.07156 (2020). [link](https://arxiv.org/pdf/2009.07156.pdf)
 - Wang, Jingjing, et al. "Solar Flare Predictive Features Derived from Polarity Inversion Line Masks in Active Regions Using an Unsupervised Machine Learning Algorithm." The Astrophysical Journal 892.2 (2020): 140. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab7b6c/pdf)
 - Ahmadzadeh, Azim, et al. "How to Train Your Flare Prediction Model: Revisiting Robust Sampling of Rare Events." The Astrophysical Journal Supplement Series 254.2 (2021): 23. [link](https://iopscience.iop.org/article/10.3847/1538-4365/abec88/pdf)
-McGranaghan, Ryan M., et al. "Toward a next generation particle precipitation model: Mesoscale prediction through machine learning (a case study and framework for progress)." Space Weather 19.6 (2021): e2020SW002684. [link](https://doi.org/10.1029/2020SW002684)
+- McGranaghan, Ryan M., et al. "Toward a next generation particle precipitation model: Mesoscale prediction through machine learning (a case study and framework for progress)." Space Weather 19.6 (2021): e2020SW002684. [link](https://doi.org/10.1029/2020SW002684)
 
 ### Other Applications
 
