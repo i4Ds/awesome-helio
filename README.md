@@ -106,8 +106,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [Community Coordinated Modeling Center](https://ccmc.gsfc.nasa.gov/index.php) - Partnership for space science and space weather models.
 - [Dr Peter R. Young's website](https://www.pyoung.org/) - Useful materials for different missions. 
 - [Helionauts](https://helionauts.org/) - Heliophysics Forum.
-- [Helioanalytics](https://sites.google.com/view/helioanalytics/resources) - Resources for 
-- [Helio-KNOW](https://github.com/rmcgranaghan/Helio-KNOW)  - Collection of software and systems for improved information representation in Heliophysics.
+- [Helioanalytics](https://sites.google.com/view/helioanalytics/resources) - Research group and resources for data analytics in heliophysics.
 - [Heliophysics Data Portal](https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher)
 - [LMSAL AIA](https://aia.lmsal.com/) - Home of SDO's atmospheric imaging assembly (AIA).
 - [SDO Documentation](https://www.lmsal.com/sdodocs/)
@@ -120,20 +119,18 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [SSCWeb Satellite Situation Center](https://sscweb.gsfc.nasa.gov/) -  Locations for most helio spacecraft.
 - [Sungate](https://www.lmsal.com/sungate/) - Portal to solar data, events, and search tools.
 
-
 ## Papers
 
 ### Datasets
 
-- Mahajan, Sushant S., et al. "Improved Measurements of the Sun's Meridional Flow and Torsional Oscillation from Correlation Tracking on MDI and HMI Magnetograms." The Astrophysical Journal 917.2 (2021): 100. [link](https://arxiv.org/abs/2107.07731) [data](https://dataverse.harvard.edu/dataverse/lct-on-solar-magnetograms)
 - Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "A large-scale solar dynamics observatory image dataset for computer vision applications." Scientific data 4.1 (2017): 1-9. [link](https://www.nature.com/articles/sdata201796)
+- McGranaghan, R., et al. "Machine learning databases used for Journal of Geophysical Research: Space Physics manuscript: New capabilities for prediction of high-latitude ionospheric scintillation: A novel approach with machine learning.". (2018). figshare. Dataset. [link](https://doi.org/10.6084/m9.figshare.6813131.v1) 
 - Ahmadzadeh, Azim, Dustin J. Kempton, and Rafal A. Angryk. "A Curated Image Parameter Data Set from the Solar Dynamics Observatory Mission." The Astrophysical Journal Supplement Series 243.1 (2019): 18. [link](https://arxiv.org/abs/1906.01062)
 - Galvez, Richard, et al. "A machine-learning data set prepared from the NASA solar dynamics observatory mission." The Astrophysical Journal Supplement Series 242.1 (2019): 7. [link](https://arxiv.org/abs/1903.04538)
-- Angryk, Rafal A., et al. "Multivariate time series dataset for space weather data analytics." Scientific data 7.1 (2020): 1-13. [link](https://www.nature.com/articles/s41597-020-0548-x.pdf) [code](https://bitbucket.org/gsudmlab/workspace/projects/FP)
-- Shneider, Carl, et al. "A Machine-Learning-Ready Dataset Prepared from the Solar and Heliospheric Observatory Mission." arXiv preprint arXiv:2108.06394 (2021). [link](https://arxiv.org/abs/2108.06394)
 - Baek, Ji-Hye, et al. "Solar Event Detection Using Deep-Learning-Based Object Detection Methods." Solar Physics 296.11 (2021): 1-15. [link](https://link.springer.com/article/10.1007/s11207-021-01902-5)
-- McGranaghan, Ryan; ryan.mcgranaghan@colorado.edu; https://orcid.org/0000-0002-9605-0007; Mannucci, Anthony; http://orcid.org/0000-0003-2391-8490; Mattmann, Chris; et al. (2018): Machine learning databases used for Journal of Geophysical Research: Space Physics manuscript: "New capabilities for prediction of high-latitude ionospheric scintillation: A novel approach with machine learning.". figshare. Dataset. https://doi.org/10.6084/m9.figshare.6813131.v1 
-
+- Angryk, Rafal A., et al. "Multivariate time series dataset for space weather data analytics." Scientific data 7.1 (2020): 1-13. [link](https://www.nature.com/articles/s41597-020-0548-x.pdf) [code](https://bitbucket.org/gsudmlab/workspace/projects/FP)
+- Mahajan, Sushant S., et al. "Improved Measurements of the Sun's Meridional Flow and Torsional Oscillation from Correlation Tracking on MDI and HMI Magnetograms." The Astrophysical Journal 917.2 (2021): 100. [link](https://arxiv.org/abs/2107.07731) [data](https://dataverse.harvard.edu/dataverse/lct-on-solar-magnetograms)
+- Shneider, Carl, et al. "A Machine-Learning-Ready Dataset Prepared from the Solar and Heliospheric Observatory Mission." arXiv preprint arXiv:2108.06394 (2021). [link](https://arxiv.org/abs/2108.06394)
 
 ### Event detection, classification and tracking
 
@@ -157,14 +154,13 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Nagem, Tarek AM, et al. "Deep learning technology for predicting solar flares from (Geostationary Operational Environmental Satellite) data." (2018) [link](https://www.researchgate.net/publication/322924477_Deep_Learning_Technology_for_Predicting_Solar_Flares_from_Geostationary_Operational_Environmental_Satellite_Data?enrichId=rgreq-c8121ef3caa7c31906fde5bb9c53e014-XXX&enrichSource=Y292ZXJQYWdlOzMyMjkyNDQ3NztBUzo1OTAyMDE3ODA5NzM1NjhAMTUxNzcyNjQ3ODAyNA==&el=1_x_2&_esc=publicationCoverPdf)
 - Panos, Brandon, et al. "Identifying typical Mg II flare spectra using machine learning." The Astrophysical Journal 861.1 (2018): 62. [link](https://iopscience.iop.org/article/10.3847/1538-4357/aac779/pdf)
 - Jonas, Eric, et al. "Flare prediction using photospheric and coronal image data." Solar Physics 293.3 (2018): 1-22. [link](https://link.springer.com/article/10.1007/s11207-018-1258-9)
+- McGranaghan, Ryan M., et al. "New capabilities for prediction of high‐latitude ionospheric scintillation: A novel approach with machine learning." Space Weather 16.11 (2018): 1817-1846. [link](https://doi.org/10.1029/2018SW002018)
 - Chen, Yang, et al. "Identifying solar flare precursors using time series of SDO/HMI Images and SHARP Parameters." Space Weather 17.10 (2019): 1404-1426. [link](https://arxiv.org/pdf/1904.00125.pdf)
 - Panos, Brandon, and Lucia Kleint. "Real-time flare prediction based on distinctions between flaring and non-flaring active region spectra." The Astrophysical Journal 891.1 (2020): 17. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab700b/pdf)
 - Ivanov, Sergey, et al. "Solar activity classification based on Mg II spectra: towards classification on compressed data." arXiv preprint arXiv:2009.07156 (2020). [link](https://arxiv.org/pdf/2009.07156.pdf)
 - Wang, Jingjing, et al. "Solar Flare Predictive Features Derived from Polarity Inversion Line Masks in Active Regions Using an Unsupervised Machine Learning Algorithm." The Astrophysical Journal 892.2 (2020): 140. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab7b6c/pdf)
 - Ahmadzadeh, Azim, et al. "How to Train Your Flare Prediction Model: Revisiting Robust Sampling of Rare Events." The Astrophysical Journal Supplement Series 254.2 (2021): 23. [link](https://iopscience.iop.org/article/10.3847/1538-4365/abec88/pdf)
--  McGranaghan, R. M., Mannucci, A. J., Wilson, B. D., Mattmann, C. A., & Chadwick, R. (2018). New capabilities for prediction of high-latitude ionospheric scintillation: A novel approach with machine learning. Space Weather, 16, 1817– 1846. https://doi.org/10.1029/2018SW002018 
--   McGranaghan, R. M., Ziegler, J., Bloch, T., Hatch, S., Camporeale, E., Lynch, K., et al. (2021). Toward a next generation particle precipitation model: Mesoscale prediction through machine learning (a case study and framework for progress). Space Weather, 19, e2020SW002684. https://doi.org/10.1029/2020SW002684 
-
+McGranaghan, Ryan M., et al. "Toward a next generation particle precipitation model: Mesoscale prediction through machine learning (a case study and framework for progress)." Space Weather 19.6 (2021): e2020SW002684. [link](https://doi.org/10.1029/2020SW002684)
 
 ### Other Applications
 
@@ -183,8 +179,8 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [SpaceML](http://spaceml.org/repo) - A Machine Learning toolbox and developer community building the next generation AI applications for space science and exploration containing a set of [code examples](https://github.com/spaceml-org/helionb-sdoml).
 - [Sunpy](https://sunpy.org/) - Set of tools for solar data analysis with Python.
 - [SWPC CME Analysis Tool (SWPC_CAT)](https://ccmc.gsfc.nasa.gov/swpc_cat_web/) - Primary tool being used by NOAA SWPC in measuring key parameters of a Coronal Mass Ejection (CME) [code](https://github.com/nasa/ccmc-swpc-cat-web)
-- [The Heliophysics KNOWledge Network](https://github.com/rmcgranaghan/Helio-KNOW)
-- 
+- [The Heliophysics KNOWledge Network](https://github.com/rmcgranaghan/Helio-KNOW)  - Collection of software and systems for improved information representation in Heliophysics.
+
 
 ## Videos
 
