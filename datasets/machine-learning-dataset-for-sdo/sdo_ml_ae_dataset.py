@@ -359,10 +359,14 @@ def load_events_from_hek(start: dt.datetime, end: dt.datetime, event_type: str):
     """
     Retrieves a set of events from HEK and stores it in the local database
     """
+    logger.info(
+        f"starting to load events from HEK between {start} and {end} for type {event_type} from HEK")
     date_ranges = get_date_ranges(start, end)
     total_events = 0
     all_events_dfs = []
     for t_start, t_end in date_ranges:
+        logger.debug(
+            f"loading events from HEK between {t_start} and {t_end} for type {event_type} from HEK")
         event_query = a.hek.EventType(event_type)
         result = Fido.search(a.Time(t_start, t_end), event_query)
         col_names = [name for name in result["hek"].colnames if len(
@@ -615,11 +619,12 @@ load_dotenv()
 @click.option('--data-dir',  type=click.Path(exists=True, file_okay=False, readable=True), default="/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted", help='directory containing the compressed dataset (tar files)')
 @click.option('--target-dir',  type=click.Path(writable=True), default="/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted_ae", help='target path for the extracted dataset')
 @click.option("--db-connection-string", default=lambda: os.environ.get("DB_CONNECTION_STRING", ""))
-def cli(data_dir, target_dir, db_connection_string):
+def cli(data_dir, target_dir, db_connection_string, should_fetch_events=False):
     file_names = set(Path(data_dir).rglob(f'*.tar'))
 
     print(f"starting to create AE dataset in {target_dir}")
-    fetch_events(data_dir, target_dir, db_connection_string)
+    if should_fetch_events:
+        fetch_events(data_dir, target_dir, db_connection_string)
     create_ae_dataset(data_dir, target_dir, db_connection_string)
 
 
