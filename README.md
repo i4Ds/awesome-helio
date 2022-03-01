@@ -108,6 +108,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [Helionauts](https://helionauts.org/) - Heliophysics Forum.
 - [Helioanalytics](https://sites.google.com/view/helioanalytics/resources) - Research group and resources for data analytics in heliophysics.
 - [Heliophysics Data Portal](https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher)
+- [Heliophysics Data Environment](https://hdrl.gsfc.nasa.gov/) - Data and Services for the Heliophysics System Observatory.
 - [LMSAL AIA](https://aia.lmsal.com/) - Home of SDO's atmospheric imaging assembly (AIA).
 - [SDO Documentation](https://www.lmsal.com/sdodocs/)
 - [SDO Guide](https://sdo.gsfc.nasa.gov/assets/docs/SDO_Guide.pdf) - A comprehensive booklet with information about the mission.
