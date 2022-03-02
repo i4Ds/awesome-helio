@@ -1,63 +1,56 @@
-from dotenv import load_dotenv
-from pathlib import Path
-import os
-import re
-import tarfile
-import csv
-import datetime as dt
-import argparse
-from sunpy import timeseries as ts
-from sunpy.net import Fido
-from sunpy.net import attrs as a
-import pandas as pd
-import click
-import pathlib
-import pandas as pd
-import datetime as dt
-import matplotlib.pyplot as plt
-from pathlib import Path
-from PIL import Image
-import numpy as np
-import csv
-import matplotlib.patches as mpatches
-import datetime as dt
-import os
-import cv2
-import numpy as np
-from shapely.geometry.polygon import Polygon
-from shapely import wkt
-from shapely.geometry.point import Point
-from shapely.geometry import Polygon
-from pathlib import Path
-from PIL import Image, ImageDraw
-import matplotlib.pyplot as plt
-import pandas as pd
-import logging
-from sunpy.coordinates.ephemeris import get_horizons_coord
-from sunpy.net import attrs as a
-from sunpy.net import Fido
-from PIL import Image, ImageDraw
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import numpy as np
-import matplotlib.pyplot as plt
-import sunpy
-from sunpy.visualization.colormaps import cm
-from matplotlib.colors import LinearSegmentedColormap
-from PIL import Image
-import numpy as np
-import json
-import pandas as pd
-from sunpy.net import attrs as a
-from sunpy.net import Fido
-from sqlalchemy import create_engine
-from sqlalchemy import Table, Column, String, MetaData, DateTime, Sequence, Integer, UniqueConstraint
-from sqlalchemy.dialects.postgresql import insert, JSONB
-import logging
 import datetime
+import datetime as dt
+import json
+import logging
+import os
+from pathlib import Path
+
+import click
+import drms
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from astropy.time import Time
+from dotenv import load_dotenv
+from matplotlib.colors import LinearSegmentedColormap
+from PIL import Image, ImageDraw
+from shapely import wkt
+from shapely.geometry import Polygon
+from shapely.geometry.point import Point
+from shapely.geometry.polygon import Polygon
+from sqlalchemy import (Column, DateTime, Integer, MetaData, Sequence, String,
+                        Table, UniqueConstraint, create_engine)
+from sqlalchemy.dialects.postgresql import JSONB, insert
+from sunpy.net import Fido
+from sunpy.net import attrs as a
+from sunpy.visualization.colormaps import cm
 
 #
-#   utility to generate an anomaly detection dataset from the Machine Learning Dataset for the SDO
+# Utility to generate an anomaly detection dataset containing Masks for event types in HEK from the Machine Learning Dataset for the SDO
+# The generated dateset will consist of one file per image in the source dataset and will be stored as follows:
+# <target dir>/<year>/<month>/<day>/<event_type>/<maskfile>.png
+#
+# Usage: python -m sdo_ml_ae_dataset [OPTIONS]
+#
+# Options:
+#   --data-dir DIRECTORY            directory containing the compressed dataset
+#                                   (tar files) including the index (index.csv)
+#   --target-dir PATH               target path for the anomaly detection
+#                                   dataset
+#   --db-connection-string TEXT     connecting string to a running postgres
+#                                   instance for caching the events
+#   --event-type TEXT               HEK Event Type that should be used to
+#                                   generate the anomaly mask (e.g. one of AR,
+#                                   CH, FL), this parameter can be supplied
+#                                   multiple times in order to produce outputs
+#                                   for multiple event types
+#   --show-image-background BOOLEAN
+#                                   Whether to show the original image in the
+#                                   background
+#   --fetch-events BOOLEAN          Whether to fetch events from HEK (skip if
+#                                   events are already cached locally)
+#   --help                          Show this message and exit.
 #
 
 ISO_FORMAT = "%Y-%m-%dT%H:%M:%S"
@@ -66,6 +59,8 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(name)-16s %(levelname)-4s %(message)s')
 logger = logging.getLogger('HEKEventAnalyzer')
 date_format = '%Y%m%d%H%M'
+
+plt.ioff()
 
 
 class NpEncoder(json.JSONEncoder):
@@ -250,7 +245,7 @@ class SpatioTemporalEvent:
         return dict
 
 
-def convert_boundingpoints_to_pixelunit(polygon: Polygon, cdelt1, cdelt2, crpix1, crpix2, original_w, shrinkage_ratio=1):
+def convert_boundingpoints_to_pixelunit(polygon: Polygon, cdelt1, cdelt2, crpix1, crpix2, shrinkage_ratio=1):
     """
     This method converts the points coordinates from arc-sec unit to pixel unit, and meanwhile
     makes 2 modifications:
@@ -262,8 +257,6 @@ def convert_boundingpoints_to_pixelunit(polygon: Polygon, cdelt1, cdelt2, crpix1
     :param cdelt2: fits/jp2 header information to scale in y direction
     :param crpix1: fits/jp2 header information to shift in x direction
     :param crpix2: fits/jp2 header information to shift in y direction
-    :param original_w: the width of the original images. It is assumed that the images
-    are in square shape, hence width and height are equal.
     :param shrinkage_ratio: a float point that indicates the ratio (original_w/new_size).
     For example, for 512 X 512 image, it should be 8.0.
     :return: a polygon object (from Shapely package) and None if the list was empty. If you need
@@ -273,16 +266,14 @@ def convert_boundingpoints_to_pixelunit(polygon: Polygon, cdelt1, cdelt2, crpix1
     b = [(float(v[0]) / cdelt1 + crpix1, float(v[1]) / cdelt2 + crpix2)
          for v in points]
 
-    # TODO for the currated image params dataset these need to be mirror horizontally, why not here?
-    # TODO is even a shift required here, as the images have been shifted and rescaled already...at any rate the vents would need to be shifted in the same way
-    # b = [(v[0] / shrinkage_ratio, (original_w - v[1]) / shrinkage_ratio)
+    # TODO is even a shift required here, as the images have been shifted and rescaled already...at any rate the events would need to be shifted in the same way
     b = [(v[0] / shrinkage_ratio, (v[1]) / shrinkage_ratio)
          for v in b]
 
     return Polygon(b)
 
 
-def convert_events_to_pixelunits(events_df: pd.DataFrame, img_header, original_width=4096, shrinkage_factor=8):
+def convert_events_to_pixelunits(events_df: pd.DataFrame, img_header, shrinkage_factor=8):
     all_polygons = []
     all_bboxes = []
 
@@ -292,20 +283,18 @@ def convert_events_to_pixelunits(events_df: pd.DataFrame, img_header, original_w
         if(ste.hpc_boundcc is not None):
             # hpc_boundcc is optional
             poly_converted = convert_boundingpoints_to_pixelunit(polygon=ste.hpc_boundcc,
-                                                                 cdelt1=img_header['CDELT'],
-                                                                 cdelt2=img_header['CDELT'],
-                                                                 crpix1=img_header['X0'],
-                                                                 crpix2=img_header['Y0'],
-                                                                 original_w=original_width,
+                                                                 cdelt1=img_header['CDELT1'],
+                                                                 cdelt2=img_header['CDELT2'],
+                                                                 crpix1=img_header['CRPIX1'],
+                                                                 crpix2=img_header['CRPIX2'],
                                                                  shrinkage_ratio=shrinkage_factor)
             all_polygons.append(poly_converted)
 
         bbox_converted = convert_boundingpoints_to_pixelunit(polygon=ste.hpc_bbox,
-                                                             cdelt1=img_header['CDELT'],
-                                                             cdelt2=img_header['CDELT'],
-                                                             crpix1=img_header['X0'],
-                                                             crpix2=img_header['Y0'],
-                                                             original_w=original_width,
+                                                             cdelt1=img_header['CDELT1'],
+                                                             cdelt2=img_header['CDELT2'],
+                                                             crpix1=img_header['CRPIX1'],
+                                                             crpix2=img_header['CRPIX2'],
                                                              shrinkage_ratio=shrinkage_factor)
 
         all_bboxes.append(bbox_converted)
@@ -313,21 +302,49 @@ def convert_events_to_pixelunits(events_df: pd.DataFrame, img_header, original_w
     return (all_polygons, all_bboxes)
 
 
-def get_meta_info(image_path, timestamp):
-    # https://docs.sunpy.org/en/stable/api/sunpy.coordinates.ephemeris.get_horizons_coord.html#sunpy.coordinates.ephemeris.get_horizons_coord
+def get_meta_info(timestamp):
+    # https://docs.sunpy.org/projects/drms/en/latest/tutorial.html#basic-usage
+    # https://github.com/sunpy/drms/blob/main/examples/plot_aia_lightcurve.py
+    # http://jsoc.stanford.edu/ajax/RecordSetHelp.html
 
-    coords = get_horizons_coord('SDO', index.timestamp)
-    # TODO how to obtain just the FITS header information?
-    # QUALITY,DSUN,X0,R_SUN,Y0,CDELT,FILE_NAME
-    # 1073741824,147126420000.0,2053.23,1628.7837,2045.8,0.599076,2012-01-02T060000__171.jpeg
+    # Construct the DRMS query string: "Series[timespan][wavelength]"
+    keys = [
+        'T_REC',
+        'T_OBS',
+        'DATAMIN',
+        'DATAMAX',
+        'DATAMEAN',
+        'X0_MP',
+        'Y0_MP',
+        'R_SUN',
+        'CDELT1',
+        'CDELT2',
+        'CRPIX1',
+        'CRPIX2',
+        'DSUN_OBS',
+    ]
+
+    ta = Time(timestamp, format='datetime', scale='utc')
+    tai_ts = ta.tai.strftime('%Y.%m.%d_%H:%M_TAI')
+
+    wavelength = 171
+    query_str = f'aia.lev1_euv_12s[{tai_ts}/0s][{wavelength}]'
+    client = drms.Client()
+    result = client.query(query_str, key=keys)
+    if len(result) < 1:
+        logger.warn(f"no FITS header found in JSOC for query {query_str}")
+        return None
     header = {
-        'DSUN': 147126420000.0,
-        'X0': 2053.23,
-        'Y0': 2045.8,
-        "R_SUN": 1628.7837,
-        "CDELT": 0.599076,
-        "timestamp": index.timestamp
+        'DSUN_OBS': result["DSUN_OBS"][0],
+        'CRPIX1': result["CRPIX1"][0],
+        'CRPIX2': result["CRPIX2"][0],
+        "R_SUN": result["R_SUN"][0],
+        "CDELT1": result["CDELT1"][0],
+        "CDELT2": result["CDELT1"][0],
+        "timestamp": timestamp
     }
+
+    logger.debug(f"retrieved header from JSOC {header} for query {query_str}")
 
     return header
 
@@ -379,25 +396,6 @@ def load_events_from_hek(start: dt.datetime, end: dt.datetime, event_type: str):
     return pd.concat(all_events_dfs)
 
 
-def load_boxes(src_img_full_path, index_path, hek_event_type='AR', instrument="AIA", allowed_time_diff_seconds=300):
-    meta = get_meta_info(src_img_full_path, index_path)
-    timestamp = meta["timestamp"]
-    start = timestamp - dt.timedelta(seconds=allowed_time_diff_seconds)
-    end = timestamp + dt.timedelta(seconds=allowed_time_diff_seconds)
-    events_df = load_events_from_hek(start, end, hek_event_type)
-
-    if len(events_df) < 1:
-        logger.warning(f"no events found")
-        return None, None, None
-
-    # filter events that were observed in the respective wavelength, possibly also filter by feature extraction method
-    events_df = events_df[events_df['obs_observatory'].str.contains("SDO")]
-    logger.info(f"after filter {len(events_df)} events")
-
-    hek_bboxes, hek_polygons = convert_events_to_pixelunits(events_df, meta)
-    return events_df, hek_bboxes, hek_polygons
-
-
 # Channels that correspond to HMI Magnetograms
 HMI_WL = ['bx', 'by', 'bz']
 # A colormap for visualizing HMI
@@ -405,22 +403,22 @@ HMI_CM = LinearSegmentedColormap.from_list(
     "bwrblack", ["#0000ff", "#000000", "#ff0000"])
 
 
-def channelNameToMap(name):
+def channel_name_to_map(name):
     """Given channel name, return colormap"""
     return HMI_CM if name in HMI_WL else cm.cmlist.get('sdoaia%d' % int(name))
 
 
-def getClip(X, name):
+def get_clip(X, name):
     """Given an image and the channel name, get the right clip"""
-    return getSignedPctClip(X) if name in HMI_WL else getPctClip(X)
+    return get_signed_pct_clip(X) if name in HMI_WL else get_pct_clip(X)
 
 
-def getPctClip(X):
+def get_pct_clip(X):
     """Return the 99.99th percentile"""
     return (0, np.quantile(X.ravel(), 0.999))
 
 
-def getSignedPctClip(X):
+def get_signed_pct_clip(X):
     """Return the 99.99th percentile by magnitude, but symmetrize it so 0 is in the middle"""
     v = np.quantile(np.abs(X.ravel()), 0.999)
     return (-v, v)
@@ -438,10 +436,9 @@ def display_img(img_path, hek_bboxes, hek_polygons, channelName):
         return
     plt.clf()
     X = np.load(img_path)['x'].astype(np.float64)
-    V = vis(X, channelNameToMap(channelName), getClip(X, channelName))
+    V = vis(X, channel_name_to_map(channelName), get_clip(X, channelName))
 
     img = Image.fromarray(V)
-    # img = img.convert('RGB')
     img_draw = ImageDraw.Draw(img)
 
     fig = plt.figure(figsize=(12, 12))
@@ -472,51 +469,40 @@ def display_img(img_path, hek_bboxes, hek_polygons, channelName):
     plt.imshow(img)
 
 
-def save_mask_file(img_path, target_path, hek_polygons, channelName):
+def save_mask_file(img_path, target_path, hek_polygons, channel_name, display_image=False):
     if hek_polygons is None:
         return
     plt.clf()
-    X = np.load(img_path)['x'].astype(np.float64)
-    V = vis(X, channelNameToMap(channelName), getClip(X, channelName))
 
-    img = Image.fromarray(V)
-    img_draw = ImageDraw.Draw(img)
+    if display_image:
+        X = np.load(img_path)['x'].astype(np.float64)
+        V = vis(X, channel_name_to_map(channel_name),
+                get_clip(X, channel_name))
 
-    fig = plt.figure(figsize=(12, 12))
+        img = Image.fromarray(V)
+        img_draw = ImageDraw.Draw(img)
+    else:
+        # https://pillow.readthedocs.io/en/stable/handbook/concepts.html#concept-modes
+        img = Image.new("P", (512, 512), 0)  # initialze a black canvas
+        img_draw = ImageDraw.Draw(img)
+
+    fig = plt.figure()
 
     for poly in hek_polygons:
         poly = poly.exterior.coords
-        img_draw.polygon(poly, fill="red")
+        fill = 255  # display polygon in white or red depending if the image should be shown
+        if display_image:
+            fill = "red"
+        img_draw.polygon(poly, fill=fill)
 
     plt.axis('off')
-    title = img_path.name
-    plt.title(title)
-    fig.savefig(target_path)
+    plt.imshow(img)
+    fig.savefig(target_path, bbox_inches='tight', pad_inches=0)
+    plt.close(fig)
 
 
 def store_events(connection_string: str, events_df):
-    db = create_engine(connection_string)
-    meta = MetaData(db)
-    events_table = Table('hek_events', meta,
-                         Column('event_id', Integer, Sequence(
-                             'event_id_seq'), primary_key=True),
-                         Column('event_type', String, nullable=False),
-                         Column('event_starttime',
-                                DateTime, nullable=False),
-                         Column('event_endtime',
-                                DateTime, nullable=False),
-                         Column('obs_observatory', String),
-                         Column('obs_instrument', String),
-                         Column('obs_channelid', String),
-                         Column('kb_archivid', String,
-                                nullable=False),
-                         Column('hpc_bbox', String),
-                         Column('hpc_boundcc', String),
-                         Column('hpc_coord', String),
-                         Column('full_event', JSONB),
-                         UniqueConstraint('kb_archivid', name='uix_kb_archivid'))
-    events_table.create(checkfirst=True)
-
+    db, events_table = db_connect(connection_string)
     with db.connect() as conn:
         for idx, event in events_df.iterrows():
             full_event = events_df.iloc[idx].to_dict()
@@ -544,7 +530,33 @@ def store_events(connection_string: str, events_df):
             conn.execute(insert_statement)
 
 
-def find_events_at(timestamp, event_types=None, observatory=None, instrument=None, allowed_time_diff_seconds=30) -> pd.DataFrame:
+def db_connect(connection_string):
+    db = create_engine(connection_string)
+    meta = MetaData(db)
+    events_table = Table('hek_events', meta,
+                         Column('event_id', Integer, Sequence(
+                             'event_id_seq'), primary_key=True),
+                         Column('event_type', String, nullable=False),
+                         Column('event_starttime',
+                                DateTime, nullable=False),
+                         Column('event_endtime',
+                                DateTime, nullable=False),
+                         Column('obs_observatory', String),
+                         Column('obs_instrument', String),
+                         Column('obs_channelid', String),
+                         Column('kb_archivid', String,
+                                nullable=False),
+                         Column('hpc_bbox', String),
+                         Column('hpc_boundcc', String),
+                         Column('hpc_coord', String),
+                         Column('full_event', JSONB),
+                         UniqueConstraint('kb_archivid', name='uix_kb_archivid'))
+    events_table.create(checkfirst=True)
+    return db, events_table
+
+
+def find_events_at(timestamp, connection_string, event_types=None, observatory=None, instrument=None, allowed_time_diff_seconds=30) -> pd.DataFrame:
+    db, events_table = db_connect(connection_string)
     with db.connect() as conn:
         select_statement = events_table.select()
         select_statement = select_statement.where(
@@ -593,39 +605,65 @@ def load_index(data_path, target_path):
     return index_df
 
 
-def create_ae_dataset(data_path, target_path):
+def create_ae_dataset(data_path, target_path, db_connection_string, event_types, show_image_background, channel=171):
     index_df = load_index(data_path, target_path)
+    index_df = index_df[index_df["channel"] == channel]
     for idx, row in index_df.iterrows():
+        for event_type in event_types:
+            ts = row["timestamp"]
+            img_path = Path(row["path"])
+            year = str(ts.year)
+            month = ts.strftime("%m")
+            day = ts.strftime("%d")
+            target_image_dir = target_path / \
+                Path(year) / Path(month) / Path(day) / \
+                Path(event_type)
+            target_image_path = target_image_dir / \
+                Path(row["file_name"] + ".png")
 
-        meta = get_meta_info(row["path"], index_path)
-        events_df = find_events_at()
-        if len(events_df) < 1:
-            logger.warning(f"no events found")
-            continue
+            if os.path.isfile(target_image_path):
+                logger.info(f"file exists, skipping")
+                continue
 
-        # filter events that were observed in the respective wavelength, possibly also filter by feature extraction method
-        events_df = events_df[events_df['obs_observatory'].str.contains("SDO")]
-        logger.info(f"after filter {len(events_df)} events")
+            if not os.path.exists(target_image_dir):
+                os.makedirs(target_image_dir)
 
-        hek_bboxes, hek_polygons = convert_events_to_pixelunits(
-            events_df, meta)
-        save_mask_file(src_img_full_path, hek_bboxes, channelName=171)
+            meta = get_meta_info(ts)
+            events_df = find_events_at(
+                ts, db_connection_string, event_types=[event_type])
+            if len(events_df) < 1:
+                logger.warning(f"no events found")
+                continue
+
+            # filter events that were observed in the respective wavelength, possibly also filter by feature extraction method
+            events_df = events_df[events_df['obs_observatory'].str.contains(
+                "SDO")]
+            logger.info(f"after filter {len(events_df)} events")
+
+            hek_bboxes, hek_polygons = convert_events_to_pixelunits(
+                events_df, meta)
+
+            save_mask_file(img_path, target_image_path,
+                           hek_bboxes, channel_name=171, display_image=show_image_background)
 
 
 load_dotenv()
 
 
 @click.command()
-@click.option('--data-dir',  type=click.Path(exists=True, file_okay=False, readable=True), default="/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted", help='directory containing the compressed dataset (tar files)')
-@click.option('--target-dir',  type=click.Path(writable=True), default="/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted_ae", help='target path for the extracted dataset')
-@click.option("--db-connection-string", default=lambda: os.environ.get("DB_CONNECTION_STRING", ""))
-def cli(data_dir, target_dir, db_connection_string, should_fetch_events=False):
-    file_names = set(Path(data_dir).rglob(f'*.tar'))
-
+@click.option('--data-dir',  type=click.Path(exists=True, file_okay=False, readable=True), default="/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted", help='directory containing the compressed dataset (tar files) including the index (index.csv)')
+@click.option('--target-dir',  type=click.Path(writable=True), default="/mnt/data02/sdo/stanford_machine_learning_dataset_for_sdo_extracted_ae", help='target path for the anomaly detection dataset')
+@click.option("--db-connection-string", default=lambda: os.environ.get("DB_CONNECTION_STRING", ""), help="connecting string to a running postgres instance for caching the events")
+@click.option("--event-type", default=["AR"], multiple=True, type=str, help="HEK Event Type that should be used to generate the anomaly mask (e.g. one of AR, CH, FL), this parameter can be supplied multiple times in order to produce outputs for multiple event types")
+@click.option("--show-image-background", default=False, type=bool, help="Whether to show the original image in the background")
+@click.option("--fetch-events", default=False, type=bool, help="Whether to fetch events from HEK (skip if events are already cached locally)")
+def cli(data_dir, target_dir, db_connection_string, event_type, show_image_background, fetch_events):
     print(f"starting to create AE dataset in {target_dir}")
-    if should_fetch_events:
+    if fetch_events:
         fetch_events(data_dir, target_dir, db_connection_string)
-    create_ae_dataset(data_dir, target_dir, db_connection_string)
+
+    create_ae_dataset(data_dir, target_dir, db_connection_string,
+                      event_type, show_image_background)
 
 
 if __name__ == "__main__":
