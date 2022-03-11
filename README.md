@@ -143,7 +143,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Kempton, Dustin J., Michael A. Schuh, and Rafal A. Angryk. "Tracking solar phenomena from the sdo." The Astrophysical Journal 869.1 (2018): 54. [link](https://iopscience.iop.org/article/10.3847/1538-4357/aae9e9)
 - Armstrong, John A., and Lyndsay Fletcher. "Fast solar image classification using deep learning and its importance for automation in solar physics." Solar Physics 294.6 (2019): 1-23. [link](https://link.springer.com/article/10.1007/s11207-019-1473-z)
 - Gitiaux, Xavier, et al. "Probabilistic Super-Resolution of Solar Magnetograms: Generating Many Explanations and Measuring Uncertainties." arXiv preprint arXiv:1911.01486 (2019). [link](https://arxiv.org/pdf/1911.01486.pdf)
-- Jungbluth, Anna, et al. "Single-frame super-resolution of solar magnetograms: Investigating physics-based metrics\& losses." arXiv preprint arXiv:1911.01490 (2019).
+- Jungbluth, Anna, et al. "Single-frame super-resolution of solar magnetograms: Investigating physics-based metrics\& losses." arXiv preprint arXiv:1911.01490 (2019). [link](https://arxiv.org/pdf/1911.01490.pdf)
 - Love, Teri, Thomas Neukirch, and Clare E. Parnell. "Analyzing AIA Flare Observations Using Convolutional Neural Networks." Frontiers in Astronomy and Space Sciences 7 (2020): 34. [link](https://doi.org/10.3389/fspas.2020.00034)
 
 ### Missions
