@@ -188,5 +188,6 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 
 ## Videos
 
-- [SDO 2021 Science Workshop](https://www.youtube.com/channel/UCy_NKqf3CnLGlBTBJ5DmkBA) - Recent science topics targeting SDO data
 - [Big data 2020 Conference Talk](https://dmlab.cs.gsu.edu/bigdata/bigdata-tutorial-2020/BigData2020_Tutorial_backupTalks2.mp4) - Tutorial 6: Data Sources, Tools, and Techniques for Big Data-driven Machine Learning in Heliophysics
+- [SDO 2021 Science Workshop](https://www.youtube.com/channel/UCy_NKqf3CnLGlBTBJ5DmkBA) - Recent science topics targeting SDO data
+- [SpaceML Youtube Channel](https://www.youtube.com/channel/UCxI8ZDo3Gs33l3FTujx_TpQ) - machine learning toolbox and developer community building open science AI applications for space science and exploration.
