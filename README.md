@@ -145,6 +145,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Gitiaux, Xavier, et al. "Probabilistic Super-Resolution of Solar Magnetograms: Generating Many Explanations and Measuring Uncertainties." arXiv preprint arXiv:1911.01486 (2019). [link](https://arxiv.org/pdf/1911.01486.pdf)
 - Jungbluth, Anna, et al. "Single-frame super-resolution of solar magnetograms: Investigating physics-based metrics\& losses." arXiv preprint arXiv:1911.01490 (2019). [link](https://arxiv.org/pdf/1911.01490.pdf)
 - Love, Teri, Thomas Neukirch, and Clare E. Parnell. "Analyzing AIA Flare Observations Using Convolutional Neural Networks." Frontiers in Astronomy and Space Sciences 7 (2020): 34. [link](https://doi.org/10.3389/fspas.2020.00034)
+- Mackovjak, Šimon, et al. "SCSS-Net: solar corona structures segmentation by deep learning." Monthly Notices of the Royal Astronomical Society 508.3 (2021): 3111-3124. [code](https://github.com/space-lab-sk/scss-net) [link](https://arxiv.org/pdf/2109.10834.pdf)
 
 ### Missions
 
