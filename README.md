@@ -83,7 +83,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [DeepSDO Event dataset](http://sdo.kasi.re.kr/dataset_deepsdo_event.aspx) - Dataset curated by experts containing three solar event categories (coronal holes, sunspots, and prominences). Suitable for object detection using deep learning-based models. 
 - [LSDO](https://dataverse.harvard.edu/dataverse/lsdo) - A Large-scale Solar Dynamics Observatory image dataset for computer vision applications Dataverse.
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory](https://purl.stanford.edu/nk828sc2920) - A curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research.
-- [Machine Learning Data Set for NASA's Solar Dynamics Observatory v2](https://sdoml.github.io/#/?id=main) - The second version of the curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research. [colab](https://colab.research.google.com/github/spaceml-org/helionb-sdoml/blob/main/notebooks/01_sdoml_dataset_2018/sdoml_dataset_colab.ipynb#scrollTo=u8yLRK4x30gr) [intro](https://www.youtube.com/watch?v=5KNFmnyWRQk)
+- [Machine Learning Data Set for NASA's Solar Dynamics Observatory v2](https://sdoml.github.io/#/?id=main) - The second version of the curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research. [colab](https://colab.research.google.com/github/spaceml-org/helionb-sdoml/blob/main/notebooks/01_sdoml_dataset_2018/sdoml_dataset_colab.ipynb#scrollTo=u8yLRK4x30gr) [intro](https://www.youtube.com/watch?v=5KNFmnyWRQk) [code](https://github.com/SDOML/SDOMLv2)
 - [SDOBenchmark](https://i4ds.github.io/SDOBenchmark/) - Machine learning image dataset for the prediction of solar flares.
 - [SOHO/MDI & SDO/HMI line-of-sight Magnetogram Dataset](http://spaceml.org/repo/project/605326665a5e160011fe1175/true) - Curated dataset consisting of co-aligned, co-temporal observations of the same physical structures as observed by HMI and MDI (rotated to the corresponding the HMI frame), ideal for learning-based super-resolution techniques. [colab](https://colab.research.google.com/drive/1mOP-Zx8NPhtLzb17fxi56EdD_Wn6VFuZ?usp=sharing) [code](https://github.com/spaceml-org/helionb-mag) [intro](https://www.youtube.com/watch?v=rhxyC9MkWGU)
 - [SOHO/SDO ML Ready Dataset](https://github.com/cshneider/soho-ml-data-ready) - Code to generate and temporally sync SoHO and/or SDO Mission image products to make a standardized machine-learning-ready dataset.
@@ -133,6 +133,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Angryk, Rafal A., et al. "Multivariate time series dataset for space weather data analytics." Scientific data 7.1 (2020): 1-13. [link](https://www.nature.com/articles/s41597-020-0548-x.pdf) [code](https://bitbucket.org/gsudmlab/workspace/projects/FP)
 - Mahajan, Sushant S., et al. "Improved Measurements of the Sun's Meridional Flow and Torsional Oscillation from Correlation Tracking on MDI and HMI Magnetograms." The Astrophysical Journal 917.2 (2021): 100. [link](https://arxiv.org/abs/2107.07731) [data](https://dataverse.harvard.edu/dataverse/lct-on-solar-magnetograms)
 - Shneider, Carl, et al. "A Machine-Learning-Ready Dataset Prepared from the Solar and Heliospheric Observatory Mission." arXiv preprint arXiv:2108.06394 (2021). [link](https://arxiv.org/abs/2108.06394)
+- Bobra, Monica G., et al. "SMARPs and SHARPs: Two Solar Cycles of Active Region Data." The Astrophysical Journal Supplement Series 256.2 (2021): 26. [link](https://iopscience.iop.org/article/10.3847/1538-4365/ac1f1d/pdf) [code](https://github.com/mbobra/SMARPs)
 
 ### Event detection, classification and tracking
 
@@ -146,6 +147,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Jungbluth, Anna, et al. "Single-frame super-resolution of solar magnetograms: Investigating physics-based metrics\& losses." arXiv preprint arXiv:1911.01490 (2019). [link](https://arxiv.org/pdf/1911.01490.pdf)
 - Love, Teri, Thomas Neukirch, and Clare E. Parnell. "Analyzing AIA Flare Observations Using Convolutional Neural Networks." Frontiers in Astronomy and Space Sciences 7 (2020): 34. [link](https://doi.org/10.3389/fspas.2020.00034)
 - Mackovjak, Šimon, et al. "SCSS-Net: solar corona structures segmentation by deep learning." Monthly Notices of the Royal Astronomical Society 508.3 (2021): 3111-3124. [code](https://github.com/space-lab-sk/scss-net) [link](https://arxiv.org/pdf/2109.10834.pdf)
+- Broock, Elena García, Tobías Felipe, and A. Asensio Ramos. "Performance of solar far-side active region neural detection." Astronomy & Astrophysics 652 (2021): A132. [link](https://arxiv.org/pdf/2106.09365.pdf)
 
 ### Missions
 
@@ -166,11 +168,15 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - Wang, Jingjing, et al. "Solar Flare Predictive Features Derived from Polarity Inversion Line Masks in Active Regions Using an Unsupervised Machine Learning Algorithm." The Astrophysical Journal 892.2 (2020): 140. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab7b6c/pdf)
 - Ahmadzadeh, Azim, et al. "How to Train Your Flare Prediction Model: Revisiting Robust Sampling of Rare Events." The Astrophysical Journal Supplement Series 254.2 (2021): 23. [link](https://iopscience.iop.org/article/10.3847/1538-4365/abec88/pdf)
 - McGranaghan, Ryan M., et al. "Toward a next generation particle precipitation model: Mesoscale prediction through machine learning (a case study and framework for progress)." Space Weather 19.6 (2021): e2020SW002684. [link](https://doi.org/10.1029/2020SW002684)
+- Deshmukh, Varad, et al. "Decreasing False Alarm Rates in ML-based Solar Flare Prediction using SDO/HMI Data." arXiv preprint arXiv:2111.10704 (2021). [link](https://arxiv.org/pdf/2111.10704.pdf)
+- Brown, Edward JE, et al. "Attention‐Based Machine Vision Models and Techniques for Solar Wind Speed Forecasting Using Solar EUV Images." Space Weather 20.3 (2022): e2021SW002976. [link](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2021SW002976)
+- Hu, Andong, et al. "Probabilistic prediction of Dst storms one-day-ahead using Full-Disk SoHO Images" [code](https://github.com/HuanWinter/Dst_SoHO) [link](https://arxiv.org/pdf/2203.11001.pdf)
 
 ### Other Applications
 
 - Wright, Paul J., et al. "DeepEM: Demonstrating a Deep Learning Approach to DEM Inversion." Zenodo. [link](https://zenodo.org/record/2587015#.YMjHtZMzau8)
 - Guedes dos Santos, L. F., et al. "Multi-Channel Auto-Calibration for the Atmospheric Imaging Assembly instrument with Deep Learning." AGU Fall Meeting Abstracts. Vol. 2020. 2020. [link](https://arxiv.org/abs/2012.14023)
+- Jarolim, Robert, et al. "Instrument-To-Instrument translation: Instrumental advances drive restoration of solar observation series via deep learning." (2022). [link](https://assets.researchsquare.com/files/rs-1021940/v1_covered.pdf?c=1645732337) [code](https://github.com/RobertJaro/InstrumentToInstrument)
 
 ## Tools
 
