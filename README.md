@@ -51,6 +51,7 @@ A comprehensive list of different missions can be found [here](https://science.n
 ## Books
 
 - [Machine Learning, Statistics, and Data Mining for Heliophysics](https://helioml.github.io/HelioML) - Bobra, Monica, and James Paul Mason. "Machine learning, statistics, and data mining for heliophysics."
+- [Deep Learning in Solar Astronomy](https://link.springer.com/book/10.1007/978-981-19-2746-1) - Xu, Long, Yihua Yan, and Xin Huang. "Deep Learning in Solar Astronomy."
 
 ## Datasets
 
@@ -90,6 +91,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [Solar Flare Prediction from Time Series of Solar Magnetic Field Parameters](https://www.kaggle.com/c/bigdata2019-flare-prediction/data) - Processed dataset provided for the IEEE Big Data 2019 Big Data Cup consisting of a set of magnetic field parameters calculated from individual SHARPs.
 - [SWAN-SF](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EBCFKM) Multivariate time series (MVTS) data extracted from HMI Active Region Patch (SHARP) series.
 
+When working with AIA data and analyzing short-lived phenomena, make sure to consider respiking the data as the AIA despiking algorithm might remove some of the features (Young, Peter R., et al. "An Analysis of Spikes in Atmospheric Imaging Assembly (AIA) Data." Solar Physics 296.12 (2021): 1-21.).
 
 ### SOHO
 
