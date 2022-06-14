@@ -84,6 +84,7 @@ Before working with SDO data make sure to checkout the [Guide to SDO Data Analys
 - [DeepSDO Event dataset](http://sdo.kasi.re.kr/dataset_deepsdo_event.aspx) - Dataset curated by experts containing three solar event categories (coronal holes, sunspots, and prominences). Suitable for object detection using deep learning-based models. 
 - [LSDO](https://dataverse.harvard.edu/dataverse/lsdo) - A Large-scale Solar Dynamics Observatory image dataset for computer vision applications Dataverse.
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory](https://purl.stanford.edu/nk828sc2920) - A curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research.
+- [Machine Learning Data Set for NASA's Solar Dynamics Observatory - not corrected for degradation](https://zenodo.org/record/4430801#.X_xuPOlKhmE) - Version of the SDO ML v1 dataset not corrected for degradation over time.
 - [Machine Learning Data Set for NASA's Solar Dynamics Observatory v2](https://sdoml.github.io/#/?id=main) - The second version of the curated dataset from the NASA Solar Dynamics Observatory (SDO) mission in a format suitable for machine learning research. [colab](https://colab.research.google.com/github/spaceml-org/helionb-sdoml/blob/main/notebooks/01_sdoml_dataset_2018/sdoml_dataset_colab.ipynb#scrollTo=u8yLRK4x30gr) [intro](https://www.youtube.com/watch?v=5KNFmnyWRQk) [code](https://github.com/SDOML/SDOMLv2)
 - [SDOBenchmark](https://i4ds.github.io/SDOBenchmark/) - Machine learning image dataset for the prediction of solar flares.
 - [SOHO/MDI & SDO/HMI line-of-sight Magnetogram Dataset](http://spaceml.org/repo/project/605326665a5e160011fe1175/true) - Curated dataset consisting of co-aligned, co-temporal observations of the same physical structures as observed by HMI and MDI (rotated to the corresponding the HMI frame), ideal for learning-based super-resolution techniques. [colab](https://colab.research.google.com/drive/1mOP-Zx8NPhtLzb17fxi56EdD_Wn6VFuZ?usp=sharing) [code](https://github.com/spaceml-org/helionb-mag) [intro](https://www.youtube.com/watch?v=rhxyC9MkWGU)
@@ -108,6 +109,7 @@ When working with AIA data and analyzing short-lived phenomena, make sure to con
 - [Carrington rotation date list](http://umtof.umd.edu/pm/crn/)
 - [Community Coordinated Modeling Center](https://ccmc.gsfc.nasa.gov/index.php) - Partnership for space science and space weather models.
 - [Dr Peter R. Young's website](https://www.pyoung.org/) - Useful materials for different missions. 
+- [FHNW - Astroinformatics and Heliophysics](https://astro-helio.ch/) - Space-related research at the FHNW Institute for Data Science.
 - [Helionauts](https://helionauts.org/) - Heliophysics Forum.
 - [Helioanalytics](https://sites.google.com/view/helioanalytics/resources) - Research group and resources for data analytics in heliophysics.
 - [Heliophysics Data Portal](https://heliophysicsdata.gsfc.nasa.gov/websearch/dispatcher)
