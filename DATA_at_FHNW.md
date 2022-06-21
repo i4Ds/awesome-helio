@@ -15,7 +15,7 @@ Different datasets used for AstroML.
 - [sdomlv1_mini](https://github.com/dfouhey/sdodemo) - Substantially temporally downsized version of the SDO Dataset of A Machine-learning Data Set Prepared from the NASA Solar Dynamics Observatory Mission.
 - [sdomlv2_full](https://sdoml.github.io/#/?id=main) - Full version of the SDO ML v2 dataset. [SDO ML v2 data loader](https://github.com/i4Ds/sdo-cli/blob/main/src/sdo/sood/data/sdo_ml_v2_dataset.py)
 - [sdomlv2_small](https://sdoml.github.io/#/?id=main) - Small version of the SDO ML v2 dataset. [SDO ML v2 data loader](https://github.com/i4Ds/sdo-cli/blob/main/src/sdo/sood/data/sdo_ml_v2_dataset.py)
-- [sharp]() - ??
+- [sharp/derived_sharp_dataset](https://gitlab.fhnw.ch/sharp-flare-forecasting) - A derived SHARP dataset used for investigating handcrafted features and automatic features extracted with a VAE. [SHARP Flare Forecasting](https://gitlab.fhnw.ch/sharp-flare-forecasting) 
 - [swan_sf](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EBCFKM) Downloaded version of multivariate time series (MVTS) data extracted from HMI Active Region Patch (SHARP) series.
 
 ```
@@ -49,6 +49,7 @@ Different datasets used for AstroML.
 │   ├── sdomlv2_hmi_small.zarr
 │   └── sdomlv2_small.zarr
 ├── sharp
+│   ├── derived_sharp_dataset
 └── swan_sf
 ```
 
