@@ -51,6 +51,7 @@ A comprehensive list of different missions can be found [here](https://science.n
 ## Books
 
 - [Machine Learning, Statistics, and Data Mining for Heliophysics](https://helioml.github.io/HelioML) - Bobra, Monica, and James Paul Mason. "Machine learning, statistics, and data mining for heliophysics."
+- [Machine learning techniques for space weather](https://www.sciencedirect.com/book/9780128117880/machine-learning-techniques-for-space-weather) - Camporeale, Enrico, Simon Wing, and Jay Johnson, eds. "Machine learning techniques for space weather." Elsevier, 2018.
 - [Deep Learning in Solar Astronomy](https://link.springer.com/book/10.1007/978-981-19-2746-1) - Xu, Long, Yihua Yan, and Xin Huang. "Deep Learning in Solar Astronomy."
 
 ## Datasets
@@ -166,6 +167,7 @@ When working with AIA data and analyzing short-lived phenomena, make sure to con
 - Panos, Brandon, et al. "Identifying typical Mg II flare spectra using machine learning." The Astrophysical Journal 861.1 (2018): 62. [link](https://iopscience.iop.org/article/10.3847/1538-4357/aac779/pdf)
 - Jonas, Eric, et al. "Flare prediction using photospheric and coronal image data." Solar Physics 293.3 (2018): 1-22. [link](https://link.springer.com/article/10.1007/s11207-018-1258-9)
 - McGranaghan, Ryan M., et al. "New capabilities for prediction of high‐latitude ionospheric scintillation: A novel approach with machine learning." Space Weather 16.11 (2018): 1817-1846. [link](https://doi.org/10.1029/2018SW002018)
+- Camporeale, Enrico. "The challenge of machine learning in space weather: Nowcasting and forecasting." Space Weather 17.8 (2019): 1166-1207. [link](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2018SW002061)
 - Chen, Yang, et al. "Identifying solar flare precursors using time series of SDO/HMI Images and SHARP Parameters." Space Weather 17.10 (2019): 1404-1426. [link](https://arxiv.org/pdf/1904.00125.pdf)
 - Panos, Brandon, and Lucia Kleint. "Real-time flare prediction based on distinctions between flaring and non-flaring active region spectra." The Astrophysical Journal 891.1 (2020): 17. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab700b/pdf)
 - Ivanov, Sergey, et al. "Solar activity classification based on Mg II spectra: towards classification on compressed data." arXiv preprint arXiv:2009.07156 (2020). [link](https://arxiv.org/pdf/2009.07156.pdf)
