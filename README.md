@@ -25,7 +25,7 @@ Please take a quick look at the [contribution guidelines](https://github.com/i4D
   - [RHESSI](#rhessi)
   - [SDO](#sdo)
   - [SOHO](#soho)
-  - [STIX](#stix)
+  - [Solar Orbiter](#solar-orbiter)
 - [Links](#links)
 - [Papers](#papers)
   - [Datasets](#datasets-1)
@@ -99,8 +99,9 @@ When working with AIA data and analyzing short-lived phenomena, make sure to con
 
 - Shneider, Carl, et al. "A Machine-Learning-Ready Dataset Prepared from the Solar and Heliospheric Observatory Mission." arXiv preprint arXiv:2108.06394 (2021).
 
-### STIX
+### Solar Orbiter
 
+- [Solar Orbiter Notebooks](https://github.com/SolarOrbiterWorkshop/solo8_tutorials) - Repository holding all the tutorial notebooks for the data analysis day of the Solar Orbiter 8 Workshop.
 - [STIX Data Center](https://pub023.cs.technik.fhnw.ch/view/list/bsd) - Spectrometer Telescope for Imaging X-rays (STIX) on Solar Orbiter is a hard X-ray imaging spectrometer covering the energy range from 4 to 150 keV
 
 ## Links
@@ -143,6 +144,7 @@ When working with AIA data and analyzing short-lived phenomena, make sure to con
 ### Event detection, classification and tracking
 
 - Martens, P. C. H., et al. "Computer vision for the solar dynamics observatory (SDO)." Solar Physics 275.1 (2012): 79-113. [link](https://link.springer.com/article/10.1007/s11207-010-9697-y)
+- Banda, Juan M., and Rafal A. Angryk. "Unsupervised learning techniques for detection of regions of interest in Solar Images." 2015 IEEE International Conference on Data Mining Workshop (ICDMW). IEEE, 2015. [link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7395720)
 - Schuh, Michael A., Dustin Kempton, and Rafal A. Angryk. "A Region-Based Retrieval System for Heliophysics Imagery." FLAIRS Conference. 2017. [link](https://www.researchgate.net/profile/Dustin-Kempton-2/publication/317385457_A_Region-based_Retrieval_System_for_Heliophysics_Imagery/links/5cf7a11692851c4dd02a3da9/A-Region-based-Retrieval-System-for-Heliophysics-Imagery.pdf)
 - Kucuk, Ahmet, Juan M. Banda, and Rafal A. Angryk. "Solar event classification using deep convolutional neural networks." International Conference on Artificial Intelligence and Soft Computing. Springer, Cham, 2017. [link](https://www.researchgate.net/publication/317570870)
 - Illarionov, Egor A., and Andrey G. Tlatov. "Segmentation of coronal holes in solar disc images with a convolutional neural network." Monthly Notices of the Royal Astronomical Society 481.4 (2018): 5014-5021. [link](https://arxiv.org/abs/1809.05748)
@@ -153,6 +155,7 @@ When working with AIA data and analyzing short-lived phenomena, make sure to con
 - Love, Teri, Thomas Neukirch, and Clare E. Parnell. "Analyzing AIA Flare Observations Using Convolutional Neural Networks." Frontiers in Astronomy and Space Sciences 7 (2020): 34. [link](https://doi.org/10.3389/fspas.2020.00034)
 - Mackovjak, Šimon, et al. "SCSS-Net: solar corona structures segmentation by deep learning." Monthly Notices of the Royal Astronomical Society 508.3 (2021): 3111-3124. [code](https://github.com/space-lab-sk/scss-net) [link](https://arxiv.org/pdf/2109.10834.pdf)
 - Broock, Elena García, Tobías Felipe, and A. Asensio Ramos. "Performance of solar far-side active region neural detection." Astronomy & Astrophysics 652 (2021): A132. [link](https://arxiv.org/pdf/2106.09365.pdf)
+- Innocenti, Maria Elena, et al. "Unsupervised classification of simulated magnetospheric regions." Annales Geophysicae. Vol. 39. No. 5. Copernicus GmbH, 2021. [link](https://angeo.copernicus.org/articles/39/861/2021/)
 
 ### Missions
 
@@ -173,15 +176,26 @@ When working with AIA data and analyzing short-lived phenomena, make sure to con
 - Ivanov, Sergey, et al. "Solar activity classification based on Mg II spectra: towards classification on compressed data." arXiv preprint arXiv:2009.07156 (2020). [link](https://arxiv.org/pdf/2009.07156.pdf)
 - Wang, Jingjing, et al. "Solar Flare Predictive Features Derived from Polarity Inversion Line Masks in Active Regions Using an Unsupervised Machine Learning Algorithm." The Astrophysical Journal 892.2 (2020): 140. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab7b6c/pdf)
 - Ahmadzadeh, Azim, et al. "How to Train Your Flare Prediction Model: Revisiting Robust Sampling of Rare Events." The Astrophysical Journal Supplement Series 254.2 (2021): 23. [link](https://iopscience.iop.org/article/10.3847/1538-4365/abec88/pdf)
+- Li, Xuebao, et al. "Predicting solar flares using a novel deep convolutional neural network." The Astrophysical Journal 891.1 (2020): 10. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab6d04/pdf)
+- Wang, Xiantong, et al. "Predicting solar flares with machine learning: Investigating solar cycle dependence." The Astrophysical Journal 895.1 (2020): 3. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ab89ac/pdf)
 - McGranaghan, Ryan M., et al. "Toward a next generation particle precipitation model: Mesoscale prediction through machine learning (a case study and framework for progress)." Space Weather 19.6 (2021): e2020SW002684. [link](https://doi.org/10.1029/2020SW002684)
-- Deshmukh, Varad, et al. "Decreasing False Alarm Rates in ML-based Solar Flare Prediction using SDO/HMI Data." arXiv preprint arXiv:2111.10704 (2021). [link](https://arxiv.org/pdf/2111.10704.pdf)
+- Krista, Larisza D., and Matthew Chih. "A DEFT Way to Forecast Solar Flares." The Astrophysical Journal 922.2 (2021): 218. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ac2840/pdf)
+- Abduallah, Yasser, et al. "DeepSun: machine-learning-as-a-service for solar flare prediction." Research in Astronomy and Astrophysics 21.7 (2021): 160. [link](https://iopscience.iop.org/article/10.1088/1674-4527/21/7/160/pdf)
+- Pandey, Chetraj, Rafal A. Angryk, and Berkay Aydin. "Solar Flare Forecasting with Deep Neural Networks using Compressed Full-disk HMI Magnetograms." 2021 IEEE International Conference on Big Data (Big Data). IEEE, 2021. [link](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9671322)
+- Abed, Ali K., Rami Qahwaji, and Ahmed Abed. "The automated prediction of solar flares from SDO images using deep learning." Advances in Space Research 67.8 (2021): 2544-2557. [link](https://www.sciencedirect.com/science/article/pii/S0273117721000971)
+- Nishizuka, Naoto, et al. "Operational solar flare prediction model using Deep Flare Net." Earth, Planets and Space 73.1 (2021): 1-12. [link](https://earth-planets-space.springeropen.com/articles/10.1186/s40623-021-01381-9)
 - Brown, Edward JE, et al. "Attention‐Based Machine Vision Models and Techniques for Solar Wind Speed Forecasting Using Solar EUV Images." Space Weather 20.3 (2022): e2021SW002976. [link](https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2021SW002976)
 - Hu, Andong, et al. "Probabilistic prediction of Dst storms one-day-ahead using Full-Disk SoHO Images" [code](https://github.com/HuanWinter/Dst_SoHO) [link](https://arxiv.org/pdf/2203.11001.pdf)
-
+- Huwyler, Cédric, and Martin Melchior. "Using Multiple Instance Learning for Explainable Solar Flare Prediction." arXiv preprint arXiv:2203.13896 (2022). [link](https://arxiv.org/abs/2203.13896)
+- Sun, Zeyu, et al. "Predicting Solar Flares Using CNN and LSTM on Two Solar Cycles of Active Region Data." The Astrophysical Journal 931.2 (2022): 163. [link](https://iopscience.iop.org/article/10.3847/1538-4357/ac64a6/pdf)
+- Deshmukh, Varad, et al. "Decreasing False-alarm Rates in CNN-based Solar Flare Prediction Using SDO/HMI Data." The Astrophysical Journal Supplement Series 260.1 (2022): 9. [link](https://iopscience.iop.org/article/10.3847/1538-4365/ac5b0c/pdf)
+- Guastavino, Sabrina, et al. "Implementation paradigm for supervised flare forecasting studies: A deep learning application with video data." Astronomy & Astrophysics 662 (2022): A105. [link](https://www.aanda.org/articles/aa/abs/2022/06/aa43617-22/aa43617-22.html)
+  
 ### Other Applications
 
 - Wright, Paul J., et al. "DeepEM: Demonstrating a Deep Learning Approach to DEM Inversion." Zenodo. [link](https://zenodo.org/record/2587015#.YMjHtZMzau8)
 - Guedes dos Santos, L. F., et al. "Multi-Channel Auto-Calibration for the Atmospheric Imaging Assembly instrument with Deep Learning." AGU Fall Meeting Abstracts. Vol. 2020. 2020. [link](https://arxiv.org/abs/2012.14023)
+- Brown, Edward JE, et al. "Learning the solar latent space: sigma-variational autoencoders for multiple channel solar imaging." [link](https://www.researchgate.net/publication/357061916_Learning_the_solar_latent_space_sigma-variational_autoencoders_for_multiple_channel_solar_imaging)
 - Jarolim, Robert, et al. "Instrument-To-Instrument translation: Instrumental advances drive restoration of solar observation series via deep learning." (2022). [link](https://assets.researchsquare.com/files/rs-1021940/v1_covered.pdf?c=1645732337) [code](https://github.com/RobertJaro/InstrumentToInstrument)
 
 ## Tools
